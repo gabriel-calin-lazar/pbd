@@ -33,10 +33,11 @@
   ],
   "generators": {
     "@nx/angular:application": {
+      "bundler": "esbuild",
       "e2eTestRunner": "playwright",
       "linter": "eslint",
       "style": "css",
-      "unitTestRunner": "vitest"
+      "unitTestRunner": "vitest-angular"
     }
   }
 }
