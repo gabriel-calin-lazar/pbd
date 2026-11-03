@@ -47,10 +47,6 @@ export const routes: Routes = [
       import('./features/unauthorized/unauthorized.routes').then((m) => m.unauthorizedRoutes),
   },
   {
-    path: 'terms-and-conditions',
-    loadChildren: () => import('./features/legal/legal.routes').then((m) => m.legalRoutes),
-  },
-  {
     path: '**',
     loadChildren: () =>
       import('./features/not-found/not-found.routes').then((m) => m.notFoundRoutes),

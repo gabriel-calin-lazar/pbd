@@ -27,9 +27,4 @@ describe('Footer', () => {
   it('should render copyright text', () => {
     expect(el.textContent).toContain('Realworld Angular');
   });
-
-  it('should render terms and conditions link', () => {
-    const link = el.querySelector('a[href="/terms-and-conditions"]');
-    expect(link).not.toBeNull();
-  });
 });
