@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './hero-banner.css',
 })
 export class HeroBanner {
-  public readonly editionVariant = 'Starter';
+  public readonly editionVariant = 'Demo';
 }
