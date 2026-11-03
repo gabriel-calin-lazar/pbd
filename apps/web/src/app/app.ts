@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+import { RouterOutlet } from '@angular/router';
+import { Header } from './core/components/header/header';
+import { Footer } from './core/components/footer/footer';
 
 @Component({
-  imports: [NxWelcome, RouterModule],
-  selector: 'app-root',
+  selector: 'rw-root',
+  imports: [RouterOutlet, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
-  protected title = 'web';
-}
+export class App {}

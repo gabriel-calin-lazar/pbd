@@ -1,4 +1,5 @@
 import nx from '@nx/eslint-plugin';
+import angular from 'angular-eslint';
 import baseConfig from '../../eslint.config.mjs';
 
 export default [
@@ -7,20 +8,21 @@ export default [
   ...baseConfig,
   {
     files: ['**/*.ts'],
+    processor: angular.processInlineTemplates,
     rules: {
       '@angular-eslint/directive-selector': [
         'error',
         {
           type: 'attribute',
-          prefix: 'app',
+          prefix: 'rw',
           style: 'camelCase',
         },
       ],
       '@angular-eslint/component-selector': [
         'error',
         {
-          type: 'element',
-          prefix: 'app',
+          type: 'both',
+          prefix: 'rw',
           style: 'kebab-case',
         },
       ],
@@ -28,7 +30,6 @@ export default [
   },
   {
     files: ['**/*.html'],
-    // Override or add rules here
     rules: {},
   },
 ];

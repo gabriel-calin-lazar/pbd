@@ -1,12 +1,12 @@
-import playwright from 'eslint-plugin-playwright';
+import nx from '@nx/eslint-plugin';
 import baseConfig from '../../eslint.config.mjs';
 
 export default [
-  playwright.configs['flat/recommended'],
+  ...nx.configs['flat/base'],
+  ...nx.configs['flat/typescript'],
   ...baseConfig,
   {
-    files: ['**/*.ts', '**/*.js'],
-    // Override or add rules here
+    files: ['**/*.ts'],
     rules: {},
   },
 ];

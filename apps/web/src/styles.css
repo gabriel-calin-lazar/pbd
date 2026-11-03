@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@fontsource/geist';
+@import './styles/design-system/_tokens.css';
+@import './styles/design-system/_reset.css';
+@import './styles/components/input.css';
+@import '@angular/cdk/overlay-prebuilt.css';
