@@ -8,6 +8,7 @@ export class Auth {
   private readonly http = inject(HttpClient);
 
   public readonly user = signal<User | null>(null);
+  
   public readonly isAuthenticated = computed<boolean>(() => this.user() !== null);
   public readonly isCustomer = computed<boolean>(() => this.user()?.role === 'CUSTOMER');
   public readonly isAdmin = computed<boolean>(() => this.user()?.role === 'PIZZERIA_ADMIN');

@@ -4,7 +4,7 @@
 
 The frontend single-page application for Realworld Angular, built with [Angular v21](https://angular.dev/). This is a learning and reference implementation that demonstrates modern Angular patterns — standalone components, signals, reactive forms, lazy loading, route guards, and server-sent events — within a cohesive, opinionated codebase. It is part of the [RealWorld Angular](https://github.com/realworld-angular/realworld-angular) initiative.
 
-Customers can browse pizzerias, build their cart, place orders, and track their delivery. Pizzeria admins and kitchen staff have a dedicated admin panel to manage menus, orders, and staff.
+Customers can browse pizzerias, build their cart, place orders, and track their delivery. Pizzeria admins have a dedicated admin panel to manage menus and orders.
 
 ## Table of Contents
 
@@ -26,8 +26,7 @@ Key features of the frontend:
 - **Cart and checkout** — add pizzas with options (size, crust, toppings) and place an order
 - **Order tracking** — view the real-time status of your orders
 - **Authentication** — register, log in, and manage your profile
-- **Staff invite flow** — accept a pizzeria invite via a token link to join as kitchen staff
-- **Admin panel** — manage pizzerias, pizza menus, orders, and staff (role-gated)
+- **Admin panel** — manage pizzerias, pizza menus, orders (role-gated)
 
 > **This is a playground application for developers learning Angular and full-stack patterns.** It is not a real marketplace — no actual orders are fulfilled, no payment is processed, and mock data is encouraged.
 
