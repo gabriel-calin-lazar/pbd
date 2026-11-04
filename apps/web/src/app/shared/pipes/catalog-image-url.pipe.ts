@@ -9,6 +9,6 @@ export type CatalogImageKind = 'pizzeria' | 'pizza';
 export class CatalogImageUrlPipe implements PipeTransform {
   transform(filename: string, kind: CatalogImageKind): string {
     const segment = kind === 'pizzeria' ? 'pizzerias' : 'pizzas';
-    return `${environment.apiBaseUrl}/images/${segment}/${encodeURIComponent(filename)}`;
+    return `${environment.apiBaseUrl}/images/${segment}/${encodeURIComponent(filename.replace('-1.jpg', '1.png'))}`;
   }
 }
