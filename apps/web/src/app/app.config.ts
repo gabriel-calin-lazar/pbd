@@ -2,27 +2,27 @@ import { ApplicationConfig, provideAppInitializer, inject } from '@angular/core'
 import {
   provideRouter,
   withComponentInputBinding,
-  withExperimentalAutoCleanupInjectors,
+  withAutoCleanupInjectors,
   withInMemoryScrolling,
 } from '@angular/router';
-import { provideHttpClient, withInterceptors, withFetch } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { routes } from './app.routes';
 import { credentialsInterceptor } from './core/interceptors/credentials.interceptor';
-import { Auth } from './core/services/auth';
 import { baseUrlInterceptor } from './core/interceptors/base-url.interceptor';
+import { Auth } from './core/services/auth';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(
       routes,
       withComponentInputBinding({ unmatchedInputBehavior: 'undefinedIfStale' }),
-      withExperimentalAutoCleanupInjectors(),
+      withAutoCleanupInjectors(),
       withInMemoryScrolling({
         scrollPositionRestoration: 'enabled',
         anchorScrolling: 'enabled',
       }),
     ),
-    provideHttpClient(withInterceptors([baseUrlInterceptor, credentialsInterceptor]), withFetch()),
+    provideHttpClient(withInterceptors([baseUrlInterceptor, credentialsInterceptor])),
     provideAppInitializer(() => inject(Auth).init()),
   ],
 };
