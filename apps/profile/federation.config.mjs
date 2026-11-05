@@ -8,7 +8,8 @@ export default withNativeFederation({
   exposes: {
     './Routes': './apps/profile/src/app/features/profile/profile.routes.ts',
   },
-  sharedMappings: [],
+  externals: ['@pbd/auth'],
+  sharedMappings: [[['@pbd/auth'], { includeSecondaries: true }]],
   shared: fromPackageJson({
     singleton: true,
     strictVersion: true,

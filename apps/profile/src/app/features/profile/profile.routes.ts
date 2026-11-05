@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { Routes } from '@angular/router';
-import { Auth } from '@pbd/web/app/core/services/auth';
+import { Auth } from '@pbd/auth';
 
 export const profileRoutes: Routes = [
   {

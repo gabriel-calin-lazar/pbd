@@ -5,6 +5,7 @@ import {
 
 export default withNativeFederation({
   name: 'web',
+  sharedMappings: [[['@pbd/auth'], { includeSecondaries: true }]],
   shared: fromPackageJson({
     singleton: true,
     strictVersion: true,

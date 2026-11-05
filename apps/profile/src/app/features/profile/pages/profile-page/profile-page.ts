@@ -1,6 +1,6 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { Auth } from '@pbd/web/app/core/services/auth';
+import { Auth } from '@pbd/auth';
 import { Avatar } from '@pbd/web/app/shared/components/avatar/avatar';
 import { Button } from '@pbd/web/app/shared/components/button/button';
 

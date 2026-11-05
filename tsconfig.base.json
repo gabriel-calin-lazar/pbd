@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "strict": true,
     "paths": {
+      "@pbd/auth": ["./apps/web/src/app/core/services/auth"],
       "@pbd/web/*": ["./apps/web/src/*"]
     }
   },

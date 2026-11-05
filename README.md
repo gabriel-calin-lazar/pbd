@@ -84,6 +84,8 @@ The application will be available at **http://localhost:4200** and automatically
 
 ## Application Structure
 
+The `web` app is the Native Federation host and the `profile` app is a remote. They share the root-provided `Auth` service through the `@pbd/auth` mapping; the profile remote treats it as an external so it uses the host's singleton when mounted.
+
 ```
 apps/web/src/
 ├── app/                        # Root config, shell component, and route definitions
