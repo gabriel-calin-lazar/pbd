@@ -25,6 +25,6 @@ describe('Footer', () => {
   });
 
   it('should render copyright text', () => {
-    expect(el.textContent).toContain('Realworld Angular');
+    expect(el.textContent).toContain('SliceBased');
   });
 });

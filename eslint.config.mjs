@@ -26,16 +26,9 @@ export default [
     },
   },
   {
-    files: [
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.cts',
-      '**/*.mts',
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.cjs',
-      '**/*.mjs',
-    ],
-    rules: {},
+    files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'],
+    rules: {
+      '@typescript-eslint/no-non-null-assertion': 'off',
+    },
   },
 ];

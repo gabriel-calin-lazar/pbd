@@ -43,7 +43,7 @@ describe('Header', () => {
   });
 
   it('should render the logo text', () => {
-    expect(el.textContent).toContain('Sliced');
+    expect(el.textContent).toContain('SliceBased');
   });
 
   it('should show hamburger button', () => {

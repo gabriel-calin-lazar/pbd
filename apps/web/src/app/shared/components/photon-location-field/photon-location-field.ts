@@ -4,7 +4,6 @@ import { debounceTime, distinctUntilChanged, from, map, of } from 'rxjs';
 import { FormValueControl, ValidationError, WithOptionalFieldTree } from '@angular/forms/signals';
 import { PhotonQuery } from '../../../core/models/photon-query.model';
 import { switchMap } from 'rxjs/operators';
-import { PhotonApiService } from '../../../core/services/photon-api.service';
 
 export interface LocationValue {
   city: string;
@@ -23,7 +22,6 @@ let nextFieldId = 0;
   selector: 'rw-photon-location-field',
   templateUrl: './photon-location-field.html',
   styleUrl: './photon-location-field.css',
-  providers: [PhotonApiService],
 })
 export class PhotonLocationField implements FormValueControl<LocationValue | null> {
   private readonly photonApiService = injectAsync(() =>

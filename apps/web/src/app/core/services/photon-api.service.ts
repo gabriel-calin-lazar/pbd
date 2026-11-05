@@ -1,16 +1,13 @@
-import { Injectable, inject, signal } from '@angular/core';
+import { Service, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
-import { User } from '../models/user.model';
 import { PhotonLocationSuggestion } from '../../shared/components/photon-location-field/photon-location-field';
 import { PhotonQuery } from '../models/photon-query.model';
 
-@Injectable()
+@Service()
 export class PhotonApiService {
   private readonly http = inject(HttpClient);
   private readonly baseUrl = 'https://photon.komoot.io';
-
-  public readonly user = signal<User | null>(null);
 
   public search(params: PhotonQuery): Observable<PhotonLocationSuggestion[]> {
     return this.http

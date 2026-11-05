@@ -52,6 +52,7 @@
       "executor": "@angular/build:unit-test",
       "options": {
         "buildTarget": "web:build:development",
+        "watch": false,
         "tsConfig": "apps/web/tsconfig.spec.json"
       }
     },

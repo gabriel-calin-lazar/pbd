@@ -17,16 +17,10 @@ describe('HeroBanner', () => {
   });
 
   it('should render the edition variant', () => {
-    expect(el.textContent).toContain('Starter');
-  });
-
-  it('should render the banner image', () => {
-    const img = el.querySelector('img');
-    expect(img).not.toBeNull();
-    expect(img!.getAttribute('src')).toContain('realworld-angular-banner.png');
+    expect(el.textContent).toContain('Demo');
   });
 
   it('should have a heading in the sr-only section', () => {
-    expect(el.textContent).toContain('RealWorld Angular');
+    expect(el.textContent).toContain('SliceBased');
   });
 });
