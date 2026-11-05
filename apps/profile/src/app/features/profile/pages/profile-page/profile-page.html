@@ -1,0 +1,30 @@
+@if (user(); as profileUser) {
+  <div class="profile-page">
+    <div class="container">
+      <div class="profile-page__inner">
+        <div class="profile-top">
+          <header class="profile-identity">
+            <rw-avatar [name]="profileUser.name" />
+            <div class="profile-identity__text">
+              <h1 class="profile-identity__name">{{ profileUser.name }}</h1>
+              <p class="profile-identity__email">{{ profileUser.email }}</p>
+            </div>
+          </header>
+
+          <div class="profile-actions">
+            <rw-button
+              variant="outlined"
+              palette="danger"
+              [isLoading]="isLoggingOut()"
+              (click)="logout()"
+            >
+              Log out
+            </rw-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+} @else {
+  <p class="container">Please sign in to view your profile.</p>
+}

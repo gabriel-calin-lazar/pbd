@@ -1,9 +1,9 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
-
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { Auth } from '../../../../core/services/auth';
-import { Button } from '../../../../shared/components/button/button';
-import { Avatar } from '../../../../shared/components/avatar/avatar';
+import { Auth } from '@pbd/web/app/core/services/auth';
+import { Avatar } from '@pbd/web/app/shared/components/avatar/avatar';
+import { Button } from '@pbd/web/app/shared/components/button/button';
+
 @Component({
   selector: 'rw-profile-page',
   imports: [Button, Avatar],

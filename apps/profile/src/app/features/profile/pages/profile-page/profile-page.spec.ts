@@ -3,8 +3,8 @@ import { provideHttpClientTesting, HttpTestingController } from '@angular/common
 import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { ProfilePage } from './profile-page';
-import { Auth } from '../../../../core/services/auth';
-import { User } from '../../../../core/models/user.model';
+import { Auth } from '@pbd/web/app/core/services/auth';
+import { User } from '@pbd/web/app/core/models/user.model';
 
 const mockUser: User = { id: '1', email: 'test@example.com', role: 'CUSTOMER', name: 'Test User' };
 const userSignal = signal<User | null>(mockUser);

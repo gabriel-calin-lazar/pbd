@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { inject } from '@angular/core';
+import { loadRemoteModule } from '@angular-architects/native-federation';
 import { Auth } from './core/services/auth';
 import { authGuard, guestGuard } from './core/guards/auth/auth.guard';
 import { cartNotEmptyGuard } from './features/checkout/guards/cart-not-empty.guard';
@@ -38,7 +39,8 @@ export const routes: Routes = [
   },
   {
     path: 'profile',
-    loadChildren: () => import('./features/profile/profile.routes').then((m) => m.profileRoutes),
+    loadChildren: () =>
+      loadRemoteModule('profile', './Routes').then((m) => m.profileRoutes),
     canMatch: [authGuard],
   },
   {

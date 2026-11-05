@@ -1,10 +1,13 @@
+import { inject } from '@angular/core';
 import { Routes } from '@angular/router';
-import { authGuard } from '../../core/guards/auth/auth.guard';
+import { Auth } from '@pbd/web/app/core/services/auth';
 
 export const profileRoutes: Routes = [
   {
     path: '',
-    canMatch: [authGuard],
+    resolve: {
+      profileUser: () => inject(Auth).init(),
+    },
     loadComponent: () => import('./pages/profile-page/profile-page').then((m) => m.ProfilePage),
     title: 'My Profile',
   },
