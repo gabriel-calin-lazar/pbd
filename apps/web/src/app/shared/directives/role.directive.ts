@@ -8,7 +8,7 @@ import {
   signal,
 } from '@angular/core';
 import { Auth } from '../../core/services/auth';
-import { Role } from '../../features/auth/role.model';
+import { Role } from '../../core/models/role.model';
 
 /**
  * Structural directive that conditionally renders content based on the

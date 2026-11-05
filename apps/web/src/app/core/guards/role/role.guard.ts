@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
 import { CanMatchFn, Router } from '@angular/router';
 import { Auth } from '../../services/auth';
-import { Role } from '../../../features/auth/role.model';
+import { Role } from '../../models/role.model';
 
 export const roleGuard =
   (...roles: Role[]): CanMatchFn =>

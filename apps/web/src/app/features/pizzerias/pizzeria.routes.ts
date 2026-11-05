@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { roleGuard } from '../../core/guards/role/role.guard';
 import { noPizzeriaGuard } from './guards/no-pizzeria.guard';
-import { ROLES } from '../auth/role.model';
+import { Role } from '../../core/models/role.model';
 
 export const pizzeriasRoutes: Routes = [
   {
@@ -13,7 +13,7 @@ export const pizzeriasRoutes: Routes = [
   {
     path: 'admin/new',
     title: 'Create Pizzeria',
-    canMatch: [roleGuard(ROLES.PIZZERIA_ADMIN), noPizzeriaGuard],
+    canMatch: [roleGuard(Role.PIZZERIA_ADMIN), noPizzeriaGuard],
     loadComponent: () =>
       import('./pages/admin-pizzeria-form-page/admin-pizzeria-form-page').then(
         (m) => m.AdminPizzeriaFormPage,
@@ -21,7 +21,7 @@ export const pizzeriasRoutes: Routes = [
   },
   {
     path: 'admin',
-    canMatch: [roleGuard(ROLES.PIZZERIA_ADMIN)],
+    canMatch: [roleGuard(Role.PIZZERIA_ADMIN)],
     loadComponent: () =>
       import('./pages/admin-pizzeria-details-page/admin-pizzeria-details-page').then(
         (m) => m.AdminPizzeriaDetailsPage,
