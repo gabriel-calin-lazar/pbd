@@ -1,0 +1,10 @@
+{
+  "name": "photon-service",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/photon/service/src",
+  "prefix": "rw",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project photon-service --web",
+  "targets": {}
+}

@@ -8,8 +8,11 @@ export default withNativeFederation({
   exposes: {
     './Routes': './apps/profile/src/app/features/profile/profile.routes.ts',
   },
-  externals: ['@pbd/core'],
-  sharedMappings: [[['@pbd/core'], { includeSecondaries: true }]],
+  externals: ['@pbd/core', '@pbd/shared/photon/service'],
+  sharedMappings: [
+    [['@pbd/core'], { includeSecondaries: true }],
+    [['@pbd/shared/photon/service'], { includeSecondaries: true }],
+  ],
   shared: fromPackageJson({
     singleton: true,
     strictVersion: true,

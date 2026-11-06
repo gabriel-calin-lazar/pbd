@@ -5,7 +5,10 @@ import {
 
 export default withNativeFederation({
   name: 'web',
-  sharedMappings: [[['@pbd/core'], { includeSecondaries: true }]],
+  sharedMappings: [
+    [['@pbd/core'], { includeSecondaries: true }],
+    [['@pbd/shared/photon/service'], { includeSecondaries: true }],
+  ],
   shared: fromPackageJson({
     singleton: true,
     strictVersion: true,

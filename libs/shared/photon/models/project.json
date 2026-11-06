@@ -1,0 +1,9 @@
+{
+  "name": "photon-models",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/photon/models/src",
+  "prefix": "rw",
+  "projectType": "library",
+  "tags": [],
+  "targets": {}
+}

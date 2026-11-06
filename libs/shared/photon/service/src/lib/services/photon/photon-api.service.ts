@@ -1,8 +1,7 @@
-import { Service, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Service, inject } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { PhotonQuery } from '../models/photon-query.model';
-import { PhotonLocationSuggestion } from '../models/location.model';
+import { PhotonLocationSuggestion, PhotonQuery } from '@pbd/shared/photon/models';
 
 @Service()
 export class PhotonApiService {

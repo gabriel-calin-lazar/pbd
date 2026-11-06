@@ -20,6 +20,12 @@
     "paths": {
       "@pbd/core": [
         "./libs/core/src/index.ts"
+      ],
+      "@pbd/shared/photon/service": [
+        "./libs/shared/photon/service/src/index.ts"
+      ],
+      "@pbd/shared/photon/models": [
+        "./libs/shared/photon/models/src/index.ts"
       ]
     }
   },

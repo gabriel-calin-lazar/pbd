@@ -2,7 +2,8 @@ import { Component, computed, effect, injectAsync, input, model, signal } from '
 import { rxResource, toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { debounceTime, distinctUntilChanged, from, map, of } from 'rxjs';
 import { FormValueControl, ValidationError, WithOptionalFieldTree } from '@angular/forms/signals';
-import { LocationValue, PhotonLocationSuggestion, PhotonQuery } from '@pbd/core';
+import { LocationValue } from '@pbd/core';
+import { PhotonLocationSuggestion, PhotonQuery } from '@pbd/shared/photon/models';
 import { switchMap } from 'rxjs/operators';
 
 let nextFieldId = 0;
@@ -14,7 +15,7 @@ let nextFieldId = 0;
 })
 export class PhotonLocationField implements FormValueControl<LocationValue | null> {
   private readonly photonApiService = injectAsync(() =>
-    import('@pbd/core').then((m) => m.PhotonApiService),
+    import('@pbd/shared/photon/service').then((m) => m.PhotonApiService),
   );
 
   private readonly fieldId = `rw-photon-location-${++nextFieldId}`;
