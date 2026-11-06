@@ -38,8 +38,7 @@ export const routes: Routes = [
   },
   {
     path: 'profile',
-    loadChildren: () =>
-      loadRemoteModule('profile', './Routes').then((m) => m.profileRoutes),
+    loadChildren: () => loadRemoteModule('profile', './Routes'),
     canMatch: [authGuard],
   },
   {
