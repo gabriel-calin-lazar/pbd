@@ -33,6 +33,9 @@
         "cacheExternalArtifacts": true,
         "dev": true,
         "devServer": true,
+        "buildNotifications": {
+          "enable": true
+        },
         "port": 4201
       }
     },
