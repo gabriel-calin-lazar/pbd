@@ -5,7 +5,7 @@ import { form, FormField, required, email, FormRoot } from '@angular/forms/signa
 import { Auth } from '../../../../core/services/auth';
 import { Callout } from '../../../../shared/components/callout/callout';
 import { Input } from '../../../../shared/components/input/input';
-import { Button } from '../../../../shared/components/button/button';
+import { Button } from '@pbd/shared/button';
 import { firstValueFrom } from 'rxjs';
 
 @Component({

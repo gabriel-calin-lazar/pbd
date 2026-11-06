@@ -2,7 +2,7 @@ import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { Component, HostListener, effect, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Auth } from '../../services/auth';
-import { Avatar } from '../../../shared/components/avatar/avatar';
+import { Avatar } from '@pbd/shared/avatar';
 import { PizzaLogo } from '../../../shared/components/pizza-logo/pizza-logo';
 import { CartStore } from '../../../features/cart/cart.store';
 import { RoleDirective } from '../../../shared/directives/role.directive';

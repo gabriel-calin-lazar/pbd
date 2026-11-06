@@ -7,7 +7,7 @@ import { PizzaOption } from '../../../pizzerias/models/pizza.models';
 import { PizzaApi } from '../../../pizzerias/services/pizza-api';
 import { OrderApi } from '../../services/order-api';
 import { PizzaOrderFormDialogData } from '../../order.models';
-import { Button } from '../../../../shared/components/button/button';
+import { Button } from '@pbd/shared/button';
 import { Modal } from '../../../../shared/components/modal/modal';
 import { Input } from '../../../../shared/components/input/input';
 import { CatalogImageUrlPipe } from '../../../../shared/pipes/catalog-image-url.pipe';

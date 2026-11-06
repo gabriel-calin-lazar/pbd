@@ -6,7 +6,7 @@ import { filter, firstValueFrom, switchMap, finalize } from 'rxjs';
 import { Router } from '@angular/router';
 import { PizzeriaApi } from '../../services/pizzeria-api';
 import { Callout } from '../../../../shared/components/callout/callout';
-import { Button } from '../../../../shared/components/button/button';
+import { Button } from '@pbd/shared/button';
 import { ImagePicker } from '../../../../shared/components/image-picker/image-picker';
 import { PhotonLocationField } from '../../../../shared/components/photon-location-field/photon-location-field';
 import type { LocationValue } from '../../../../shared/components/photon-location-field/photon-location-field';

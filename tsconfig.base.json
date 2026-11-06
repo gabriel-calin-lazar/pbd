@@ -16,6 +16,8 @@
     "strict": true,
     "paths": {
       "@pbd/auth": ["./apps/web/src/app/core/services/auth"],
+      "@pbd/shared/avatar": ["./apps/web/src/app/shared/components/avatar/index.ts"],
+      "@pbd/shared/button": ["./apps/web/src/app/shared/components/button/index.ts"],
       "@pbd/web/*": ["./apps/web/src/*"]
     }
   },
