@@ -6,7 +6,7 @@ import { OrderApi } from '../../services/order-api';
 import { Callout } from '../../../../shared/components/callout/callout';
 import { Order } from '../../order.models';
 import { Spinner } from '../../../../shared/components/spinner/spinner';
-import { Button } from '@pbd/shared/button';
+import { Button } from '@pbd/core';
 import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
 import { Observable } from 'rxjs';
 import { Title } from '@angular/platform-browser';

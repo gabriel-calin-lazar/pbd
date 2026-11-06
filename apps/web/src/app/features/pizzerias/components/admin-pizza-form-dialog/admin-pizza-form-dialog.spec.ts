@@ -7,7 +7,7 @@ import { DialogRef, DIALOG_DATA } from '@angular/cdk/dialog';
 import { AdminPizzaFormDialog } from './admin-pizza-form-dialog';
 import { FormValueControl, FormField, FormRoot, ValidationError } from '@angular/forms/signals';
 import { Pizza } from '../../models/pizza.models';
-import { Button } from '../../../../shared/components/button/button';
+import { Button } from '@pbd/core';
 import { Callout } from '../../../../shared/components/callout/callout';
 import { Input } from '../../../../shared/components/input/input';
 import { Modal } from '../../../../shared/components/modal/modal';

@@ -10,16 +10,21 @@
     "importHelpers": true,
     "target": "es2022",
     "module": "esnext",
-    "lib": ["es2022", "dom"],
+    "lib": [
+      "es2022",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "strict": true,
     "paths": {
-      "@pbd/auth": ["./apps/web/src/app/core/services/auth"],
-      "@pbd/shared/avatar": ["./apps/web/src/app/shared/components/avatar/index.ts"],
-      "@pbd/shared/button": ["./apps/web/src/app/shared/components/button/index.ts"],
-      "@pbd/web/*": ["./apps/web/src/*"]
+      "@pbd/core": [
+        "./libs/core/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

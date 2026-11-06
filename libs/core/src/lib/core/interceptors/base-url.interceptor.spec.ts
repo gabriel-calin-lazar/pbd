@@ -3,7 +3,9 @@ import { provideHttpClient, withInterceptors, HttpClient } from '@angular/common
 import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { baseUrlInterceptor } from './base-url.interceptor';
-import { environment } from '../../../environments/environment';
+import { API_BASE_URL } from '../tokens/api-base-url';
+
+const apiBaseUrl = 'https://api.realworldangular.org';
 
 describe('baseUrlInterceptor', () => {
   let http: HttpClient;
@@ -14,6 +16,7 @@ describe('baseUrlInterceptor', () => {
       providers: [
         provideHttpClient(withInterceptors([baseUrlInterceptor])),
         provideHttpClientTesting(),
+        { provide: API_BASE_URL, useValue: apiBaseUrl },
       ],
     });
     http = TestBed.inject(HttpClient);
@@ -26,15 +29,15 @@ describe('baseUrlInterceptor', () => {
 
   it('should prepend apiBaseUrl to requests starting with /api', () => {
     http.get('/api/pizzerias').subscribe();
-    const req = httpTesting.expectOne(`${environment.apiBaseUrl}/api/pizzerias`);
-    expect(req.request.url).toBe(`${environment.apiBaseUrl}/api/pizzerias`);
+    const req = httpTesting.expectOne(`${apiBaseUrl}/api/pizzerias`);
+    expect(req.request.url).toBe(`${apiBaseUrl}/api/pizzerias`);
     req.flush([]);
   });
 
   it('should prepend apiBaseUrl to nested /api paths', () => {
     http.get('/api/auth/me').subscribe();
-    const req = httpTesting.expectOne(`${environment.apiBaseUrl}/api/auth/me`);
-    expect(req.request.url).toBe(`${environment.apiBaseUrl}/api/auth/me`);
+    const req = httpTesting.expectOne(`${apiBaseUrl}/api/auth/me`);
+    expect(req.request.url).toBe(`${apiBaseUrl}/api/auth/me`);
     req.flush({});
   });
 

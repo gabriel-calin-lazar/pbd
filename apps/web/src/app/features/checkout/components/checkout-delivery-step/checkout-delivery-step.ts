@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { FormField } from '@angular/forms/signals';
 import { CheckoutWizard } from '../../services/checkout-wizard';
-import { Input } from '../../../../shared/components/input/input';
-import { Button } from '@pbd/shared/button';
 import { PhotonLocationField } from '../../../../shared/components/photon-location-field/photon-location-field';
+import { Input } from '../../../../shared/components/input/input';
+import { Button } from '@pbd/core';
 
 @Component({
   selector: 'rw-checkout-delivery-step',

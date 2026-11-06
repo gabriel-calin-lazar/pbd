@@ -5,8 +5,7 @@ import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { AdminPizzeriaDetailsPage } from './admin-pizzeria-details-page';
 import { PizzeriaDetail } from '../../models/pizzeria.models';
-import { Auth } from '../../../../core/services/auth';
-import { User } from '../../../../core/models/user.model';
+import { Auth, User } from '@pbd/core';
 
 const mockPizzeria: PizzeriaDetail = {
   id: 'p1',

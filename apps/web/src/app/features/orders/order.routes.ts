@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
-import { roleGuard } from '../../core/guards/role/role.guard';
-import { Role } from '../../core/models/role.model';
+import { Role, roleGuard } from '@pbd/core';
 
 export const ordersRoutes: Routes = [
   {

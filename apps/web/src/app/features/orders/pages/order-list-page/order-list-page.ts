@@ -1,7 +1,7 @@
 import { Component, inject, signal, computed, effect } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DecimalPipe, DatePipe, DOCUMENT } from '@angular/common';
-import { Auth } from '../../../../core/services/auth';
+import { Auth } from '@pbd/core';
 import { OrderApi } from '../../services/order-api';
 import { Spinner } from '../../../../shared/components/spinner/spinner';
 import { Pagination } from '../../../../shared/components/pagination/pagination';

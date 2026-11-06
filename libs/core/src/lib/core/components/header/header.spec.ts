@@ -4,7 +4,7 @@ import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { Header } from './header';
 import { Auth } from '../../services/auth';
-import { CartStore } from '../../../features/cart/cart.store';
+import { HEADER_CART } from '../../services/header-cart';
 import { User } from '../../models/user.model';
 
 const userSignal = signal<User | null>(null);
@@ -33,7 +33,7 @@ describe('Header', () => {
       providers: [
         provideRouter([]),
         { provide: Auth, useValue: authStub },
-        { provide: CartStore, useValue: cartStoreStub },
+        { provide: HEADER_CART, useValue: cartStoreStub },
       ],
     }).overrideComponent(Header, { set: { schemas: [NO_ERRORS_SCHEMA] } });
 

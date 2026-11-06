@@ -7,9 +7,15 @@ import {
 } from '@angular/router';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { routes } from './app.routes';
-import { credentialsInterceptor } from './core/interceptors/credentials.interceptor';
-import { baseUrlInterceptor } from './core/interceptors/base-url.interceptor';
-import { Auth } from './core/services/auth';
+import {
+  API_BASE_URL,
+  Auth,
+  baseUrlInterceptor,
+  credentialsInterceptor,
+  HEADER_CART,
+} from '@pbd/core';
+import { CartStore } from './features/cart/cart.store';
+import { environment } from '../environments/environment';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -22,6 +28,9 @@ export const appConfig: ApplicationConfig = {
         anchorScrolling: 'enabled',
       }),
     ),
+    CartStore,
+    { provide: HEADER_CART, useExisting: CartStore },
+    { provide: API_BASE_URL, useValue: environment.apiBaseUrl },
     provideHttpClient(withInterceptors([baseUrlInterceptor, credentialsInterceptor])),
     provideAppInitializer(() => inject(Auth).init()),
   ],

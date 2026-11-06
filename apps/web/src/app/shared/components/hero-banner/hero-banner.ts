@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PizzaLogo } from '../../../shared/components/pizza-logo/pizza-logo';
+import { PizzaLogo } from '@pbd/core';
 
 @Component({
   selector: 'rw-hero-banner',

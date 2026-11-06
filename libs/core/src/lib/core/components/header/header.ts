@@ -2,10 +2,10 @@ import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { Component, HostListener, effect, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Auth } from '../../services/auth';
-import { Avatar } from '@pbd/shared/avatar';
-import { PizzaLogo } from '../../../shared/components/pizza-logo/pizza-logo';
-import { CartStore } from '../../../features/cart/cart.store';
-import { RoleDirective } from '../../../shared/directives/role.directive';
+import { Avatar } from '../../../components/avatar/avatar';
+import { PizzaLogo } from '../../../components/pizza-logo/pizza-logo';
+import { HEADER_CART } from '../../services/header-cart';
+import { RoleDirective } from '../../directives/role.directive';
 
 @Component({
   selector: 'rw-header',
@@ -15,7 +15,7 @@ import { RoleDirective } from '../../../shared/directives/role.directive';
 })
 export class Header {
   protected readonly auth = inject(Auth);
-  protected readonly cartStore = inject(CartStore);
+  protected readonly cartStore = inject(HEADER_CART);
   private readonly document = inject(DOCUMENT);
 
   protected readonly isMobileMenuOpen = signal(false);

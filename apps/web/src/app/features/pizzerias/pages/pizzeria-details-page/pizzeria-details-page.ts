@@ -11,10 +11,9 @@ import {
 import { Router, RouterLink } from '@angular/router';
 import { DecimalPipe, NgOptimizedImage } from '@angular/common';
 import { Title } from '@angular/platform-browser';
+import { Button, Page, RoleDirective } from '@pbd/core';
 import { Pizza } from '../../models/pizza.models';
-import { Page } from '../../../../core/models/pagination.model';
 import { Spinner } from '../../../../shared/components/spinner/spinner';
-import { RoleDirective } from '../../../../shared/directives/role.directive';
 import { PizzeriaApi } from '../../services/pizzeria-api';
 import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
 import { PizzaOrderFormDialog } from '../../../orders/components/pizza-order-form-dialog/pizza-order-form-dialog';
@@ -25,7 +24,6 @@ import { merge, of, Subject, timer } from 'rxjs';
 import { form, FormRoot, FormField, debounce } from '@angular/forms/signals';
 import { Dialog } from '@angular/cdk/dialog';
 import { CatalogImageUrlPipe } from '../../../../shared/pipes/catalog-image-url.pipe';
-import { Button } from '@pbd/shared/button';
 import { LoadMore } from '../../../../shared/components/load-more/load-more';
 
 interface FilterFormModel {

@@ -5,10 +5,7 @@ import {
 
 export default withNativeFederation({
   name: 'web',
-  sharedMappings: [
-    [['@pbd/auth'], { includeSecondaries: true }],
-    [['@pbd/shared/avatar', '@pbd/shared/button'], { includeSecondaries: true }],
-  ],
+  sharedMappings: [[['@pbd/core'], { includeSecondaries: true }]],
   shared: fromPackageJson({
     singleton: true,
     strictVersion: true,

@@ -3,7 +3,7 @@ import { provideHttpClientTesting, HttpTestingController } from '@angular/common
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { AdminOrderListPage } from './admin-order-list-page';
 import { AdminOrderRow } from './admin-order-row/admin-order-row';
-import { Page } from '../../../../core/models/pagination.model';
+import { Page } from '@pbd/core';
 import { AdminOrderListItem } from '../../order.models';
 import { By } from '@angular/platform-browser';
 import { Spinner } from '../../../../shared/components/spinner/spinner';

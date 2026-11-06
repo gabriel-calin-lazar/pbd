@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
-import { roleGuard } from '../../core/guards/role/role.guard';
+import { Role, roleGuard } from '@pbd/core';
 import { noPizzeriaGuard } from './guards/no-pizzeria.guard';
-import { Role } from '../../core/models/role.model';
 
 export const pizzeriasRoutes: Routes = [
   {

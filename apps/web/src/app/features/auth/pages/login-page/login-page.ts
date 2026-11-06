@@ -2,10 +2,9 @@ import { Component, inject, signal } from '@angular/core';
 
 import { Router, RouterLink } from '@angular/router';
 import { form, FormField, required, email, FormRoot } from '@angular/forms/signals';
-import { Auth } from '../../../../core/services/auth';
+import { Auth, Button } from '@pbd/core';
 import { Callout } from '../../../../shared/components/callout/callout';
 import { Input } from '../../../../shared/components/input/input';
-import { Button } from '@pbd/shared/button';
 import { firstValueFrom } from 'rxjs';
 
 @Component({

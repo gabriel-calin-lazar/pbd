@@ -3,7 +3,7 @@ import { provideHttpClientTesting, HttpTestingController } from '@angular/common
 import { provideRouter } from '@angular/router';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { PizzeriaListPage } from './pizzeria-list-page';
-import { Page } from '../../../../core/models/pagination.model';
+import { Page } from '@pbd/core';
 import { PizzeriaSummary } from '../../models/pizzeria.models';
 import { By } from '@angular/platform-browser';
 

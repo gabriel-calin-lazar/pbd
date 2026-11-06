@@ -8,9 +8,7 @@ import { PizzeriaDetailsPage } from './pizzeria-details-page';
 import { LoadMore } from '../../../../shared/components/load-more/load-more';
 import { PizzeriaDetail } from '../../models/pizzeria.models';
 import { Pizza } from '../../models/pizza.models';
-import { Page } from '../../../../core/models/pagination.model';
-import { Auth } from '../../../../core/services/auth';
-import { User } from '../../../../core/models/user.model';
+import { Auth, Page, User } from '@pbd/core';
 
 const mockPizzeria: PizzeriaDetail = {
   id: 'p1',

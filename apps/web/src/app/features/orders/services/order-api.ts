@@ -2,7 +2,7 @@ import { ResourceRef, Signal, WritableSignal, inject, Service } from '@angular/c
 import { HttpClient, httpResource } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { CouponValidation, Order } from '../order.models';
-import { Page } from '../../../core/models/pagination.model';
+import { Page } from '@pbd/core';
 import { PizzaOption } from '../../pizzerias/models/pizza.models';
 import type { Address } from '../../../shared/models/address.model';
 

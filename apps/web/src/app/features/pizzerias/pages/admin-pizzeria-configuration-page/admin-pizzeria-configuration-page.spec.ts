@@ -8,9 +8,9 @@ import { AdminPizzeriaConfigurationPage } from './admin-pizzeria-configuration-p
 import { Dialog } from '@angular/cdk/dialog';
 import { provideRouter } from '@angular/router';
 import { FormValueControl, FormField, FormRoot, ValidationError } from '@angular/forms/signals';
-import { LocationValue } from '../../../../shared/components/photon-location-field/photon-location-field';
+import { LocationValue } from '@pbd/core';
 import { Spinner } from '../../../../shared/components/spinner/spinner';
-import { Button } from '../../../../shared/components/button/button';
+import { Button } from '@pbd/core';
 import { Callout } from '../../../../shared/components/callout/callout';
 
 @Component({ template: '' })
