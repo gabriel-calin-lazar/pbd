@@ -8,7 +8,7 @@
 }
 
 .hero__banner-wrap {
-  max-width: min(460px, 100%);
+  max-width: min(230px, 100%);
   margin-inline: auto;
 }
 
