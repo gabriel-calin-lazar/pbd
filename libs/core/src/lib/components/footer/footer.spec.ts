@@ -4,7 +4,7 @@ import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { Footer } from './footer';
 import { Auth } from '@pbd/auth';
-import { User } from '../../models/user.model';
+import { User } from '@pbd/auth';
 
 const userSignal = signal<User | null>(null);
 const authStub = { user: userSignal };

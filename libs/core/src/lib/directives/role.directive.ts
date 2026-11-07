@@ -7,8 +7,7 @@ import {
   input,
   signal,
 } from '@angular/core';
-import { Auth } from '@pbd/auth';
-import { Role } from '../models/role.model';
+import { Auth, Role } from '@pbd/auth';
 
 /**
  * Structural directive that conditionally renders content based on the
@@ -55,7 +54,7 @@ export class RoleDirective {
         const value = this.rwRole();
         const roles = Array.isArray(value) ? value : [value];
         const elseTemplateRef = this.rwRoleElse();
-        
+
         const matches = roles.some((role) => {
           if (role === 'GUEST') {
             return user === null;
@@ -66,7 +65,7 @@ export class RoleDirective {
         if (matches && !this.hasView()) {
           this.viewContainer.clear();
           this.viewContainer.createEmbeddedView(this.templateRef);
-          
+
           this.hasView.set(true);
           this.hasElseView.set(false);
         } else if (!matches && !this.hasElseView()) {

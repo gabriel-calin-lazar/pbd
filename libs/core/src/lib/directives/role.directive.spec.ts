@@ -3,7 +3,7 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { RoleDirective } from './role.directive';
 import { Auth } from '@pbd/auth';
-import { User } from '../models/user.model';
+import { User } from '@pbd/auth';
 
 const userSignal = signal<User | null>(null);
 
