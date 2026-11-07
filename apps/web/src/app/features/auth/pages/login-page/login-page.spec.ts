@@ -4,7 +4,8 @@ import { provideRouter } from '@angular/router';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { LoginPage } from './login-page';
-import { Auth, User } from '@pbd/core';
+import { Auth } from '@pbd/auth';
+import { User } from '@pbd/core';
 
 const mockUser: User = { id: '1', email: 'test@example.com', role: 'CUSTOMER', name: 'Test' };
 

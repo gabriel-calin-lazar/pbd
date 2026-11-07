@@ -7,7 +7,7 @@ import {
   input,
   signal,
 } from '@angular/core';
-import { Auth } from '../services/auth';
+import { Auth } from '@pbd/auth';
 import { Role } from '../models/role.model';
 
 /**

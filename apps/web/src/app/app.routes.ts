@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
 import { inject } from '@angular/core';
 import { loadRemoteModule } from '@angular-architects/native-federation';
-import { Auth, authGuard, guestGuard } from '@pbd/core';
+import { authGuard, guestGuard } from '@pbd/core';
+import { Auth } from '@pbd/auth';
 import { cartNotEmptyGuard } from './features/checkout/guards/cart-not-empty.guard';
 
 export const routes: Routes = [

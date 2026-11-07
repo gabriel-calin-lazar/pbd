@@ -3,7 +3,7 @@ import { provideRouter } from '@angular/router';
 import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { Footer } from './footer';
-import { Auth } from '../../services/auth';
+import { Auth } from '@pbd/auth';
 import { User } from '../../models/user.model';
 
 const userSignal = signal<User | null>(null);

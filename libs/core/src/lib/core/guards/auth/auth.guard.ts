@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { CanMatchFn, Router } from '@angular/router';
-import { Auth } from '../../services/auth';
+import { Auth } from '@pbd/auth';
 
 // TODO separate in 2 files - each with specific tests
 

@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { RoleDirective } from './role.directive';
-import { Auth } from '../services/auth';
+import { Auth } from '@pbd/auth';
 import { User } from '../models/user.model';
 
 const userSignal = signal<User | null>(null);

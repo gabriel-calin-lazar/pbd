@@ -6,8 +6,8 @@ import {
 export default withNativeFederation({
   name: 'web',
   sharedMappings: [
-    [['@pbd/core'], { includeSecondaries: true }],
-    [['@pbd/shared/photon/service'], { includeSecondaries: true }],
+    // [['@pbd/core'], { includeSecondaries: true }],
+    [['@pbd/auth'], { includeSecondaries: true }],
   ],
   shared: fromPackageJson({
     singleton: true,

@@ -3,7 +3,7 @@ import { provideRouter } from '@angular/router';
 import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { Header } from './header';
-import { Auth } from '../../services/auth';
+import { Auth } from '@pbd/auth';
 import { HEADER_CART } from '../../services/header-cart';
 import { User } from '../../models/user.model';
 

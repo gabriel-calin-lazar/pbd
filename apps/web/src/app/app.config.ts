@@ -9,11 +9,11 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { routes } from './app.routes';
 import {
   API_BASE_URL,
-  Auth,
   baseUrlInterceptor,
   credentialsInterceptor,
   HEADER_CART,
 } from '@pbd/core';
+import { Auth } from '@pbd/auth';
 import { CartStore } from './features/cart/cart.store';
 import { environment } from '../environments/environment';
 

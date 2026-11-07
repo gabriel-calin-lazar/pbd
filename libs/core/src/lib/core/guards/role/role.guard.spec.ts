@@ -3,7 +3,7 @@ import { Router, provideRouter, PartialMatchRouteSnapshot, UrlTree } from '@angu
 import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { roleGuard } from './role.guard';
-import { Auth } from '../../services/auth';
+import { Auth } from '@pbd/auth';
 import { User } from '../../models/user.model';
 
 const userSignal = signal<User | null>(null);

@@ -13,6 +13,5 @@ export * from './lib/core/models/location.model';
 export * from './lib/core/models/pagination.model';
 export * from './lib/core/models/role.model';
 export * from './lib/core/models/user.model';
-export * from './lib/core/services/auth';
 export * from './lib/core/services/header-cart';
 export * from './lib/core/tokens/api-base-url';
