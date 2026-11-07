@@ -44,6 +44,8 @@ export class Auth {
   }
 
   public logout(): Observable<void> {
-    return this.http.post<void>('/api/auth/logout', {});
+    return this.http
+     .post<void>('/api/auth/logout', {})
+     .pipe(tap((user) => this.user.set(null)));
   }
 }

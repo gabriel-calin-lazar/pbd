@@ -42,6 +42,11 @@ export const routes: Routes = [
     loadChildren: () => loadRemoteModule('profile', './Routes'),
     canMatch: [authGuard],
   },
+  // {
+  //   path: 'profile-old',
+  //   loadChildren: () => import('../../../profile/src/app/features/profile/profile.routes'),
+  //   canMatch: [authGuard],
+  // },
   {
     path: 'unauthorized',
     loadChildren: () =>
