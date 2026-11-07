@@ -24,7 +24,7 @@ import { map, switchMap } from 'rxjs/operators';
 import { merge, of, Subject, timer } from 'rxjs';
 import { form, FormRoot, FormField, debounce } from '@angular/forms/signals';
 import { Dialog } from '@angular/cdk/dialog';
-import { CatalogImageUrlPipe } from '../../../../shared/pipes/catalog-image-url.pipe';
+import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
 import { LoadMore } from '../../../../shared/components/load-more/load-more';
 
 interface FilterFormModel {

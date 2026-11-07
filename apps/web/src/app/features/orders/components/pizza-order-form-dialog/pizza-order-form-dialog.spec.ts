@@ -7,13 +7,14 @@ import { PizzaOrderFormDialog } from './pizza-order-form-dialog';
 import { PizzaOrderFormDialogData } from '../../order.models';
 import { Pizza } from '../../../pizzerias/models/pizza.models';
 import { CartStore } from '../../../cart/cart.store';
-import { CatalogImageUrlPipe } from '../../../../shared/pipes/catalog-image-url.pipe';
+import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
 import { FormField, FormRoot } from '@angular/forms/signals';
 import { Button } from '@pbd/shared/components/button';
 import { Modal } from '../../../../shared/components/modal/modal';
 import { Input } from '../../../../shared/components/input/input';
 import { Spinner } from '../../../../shared/components/spinner/spinner';
 import { SizeOptionField } from '../pizza-size-option-field/pizza-size-option-field';
+import { API_BASE_URL } from '@pbd/core';
 
 const mockPizza: Pizza = {
   id: 'pizza1',
@@ -53,6 +54,7 @@ describe('PizzaOrderFormDialog', () => {
     TestBed.configureTestingModule({
       providers: [
         provideHttpClientTesting(),
+        { provide: API_BASE_URL, useValue: 'https://api.realworldangular.org' },
         { provide: DialogRef, useValue: { close: closeFn } },
         { provide: DIALOG_DATA, useValue: dialogData },
         { provide: CartStore, useValue: cartStoreStub },

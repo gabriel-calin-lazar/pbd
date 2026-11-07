@@ -4,7 +4,7 @@ import { Observable, tap } from 'rxjs';
 import { CouponValidation, Order } from '../order.models';
 import { Page } from '@pbd/core';
 import { PizzaOption } from '../../pizzerias/models/pizza.models';
-import type { Address } from '../../../shared/models/address.model';
+import type { Address } from '@pbd/shared/models/adress';
 
 @Service()
 export class OrderApi {

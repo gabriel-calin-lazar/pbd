@@ -10,7 +10,7 @@ import { PizzaOrderFormDialogData } from '../../order.models';
 import { Button } from '@pbd/shared/components/button';
 import { Modal } from '../../../../shared/components/modal/modal';
 import { Input } from '../../../../shared/components/input/input';
-import { CatalogImageUrlPipe } from '../../../../shared/pipes/catalog-image-url.pipe';
+import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
 import { SizeOptionField } from '../pizza-size-option-field/pizza-size-option-field';
 import { Spinner } from '../../../../shared/components/spinner/spinner';
 

@@ -21,7 +21,9 @@
       "@pbd/shared/photon/models": ["./libs/shared/photon/models/src/index.ts"],
       "@pbd/shared/components/avatar": ["./libs/shared/components/avatar/src/index.ts"],
       "@pbd/shared/components/button": ["./libs/shared/components/button/src/index.ts"],
-      "@pbd/shared/components/pizza-logo": ["./libs/shared/components/pizza-logo/src/index.ts"]
+      "@pbd/shared/components/pizza-logo": ["./libs/shared/components/pizza-logo/src/index.ts"],
+      "@pbd/shared/models/adress": ["./libs/shared/models/adress/src/index.ts"],
+      "@pbd/shared/pipes/catalog-image-url": ["./libs/shared/pipes/catalog-image-url/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

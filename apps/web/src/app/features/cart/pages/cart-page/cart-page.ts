@@ -7,7 +7,7 @@ import { Auth } from '@pbd/auth';
 import { Button } from '@pbd/shared/components/button';
 import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
 import { Spinner } from '../../../../shared/components/spinner/spinner';
-import { CatalogImageUrlPipe } from '../../../../shared/pipes/catalog-image-url.pipe';
+import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
 
 @Component({
   selector: 'rw-cart-page',

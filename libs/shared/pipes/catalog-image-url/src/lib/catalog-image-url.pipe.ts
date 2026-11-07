@@ -1,5 +1,5 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import { environment } from '../../../environments/environment';
+import { Pipe, PipeTransform, inject } from '@angular/core';
+import { API_BASE_URL } from '@pbd/core';
 
 export type CatalogImageKind = 'pizzeria' | 'pizza';
 
@@ -7,8 +7,10 @@ export type CatalogImageKind = 'pizzeria' | 'pizza';
   name: 'catalogImageUrl',
 })
 export class CatalogImageUrlPipe implements PipeTransform {
+  private readonly apiBaseUrl = inject(API_BASE_URL);
+
   transform(filename: string, kind: CatalogImageKind): string {
     const segment = kind === 'pizzeria' ? 'pizzerias' : 'pizzas';
-    return `${environment.apiBaseUrl}/images/${segment}/${encodeURIComponent(filename.replace('-1.jpg', '1.png'))}`;
+    return `${this.apiBaseUrl}/images/${segment}/${encodeURIComponent(filename.replace('-1.jpg', '1.png'))}`;
   }
 }

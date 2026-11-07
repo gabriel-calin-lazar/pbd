@@ -9,7 +9,7 @@ import { LoadMore } from '../../../../shared/components/load-more/load-more';
 import { PizzeriaDetail } from '../../models/pizzeria.models';
 import { Pizza } from '../../models/pizza.models';
 import { Auth } from '@pbd/auth';
-import { Page, User } from '@pbd/core';
+import { API_BASE_URL, Page, User } from '@pbd/core';
 
 const mockPizzeria: PizzeriaDetail = {
   id: 'p1',
@@ -91,6 +91,7 @@ describe('PizzeriaDetailsPage', () => {
         provideHttpClientTesting(),
         provideRouter([]),
         { provide: Auth, useValue: authStub },
+        { provide: API_BASE_URL, useValue: 'https://api.realworldangular.org' },
       ],
     });
 

@@ -14,7 +14,7 @@ import { Spinner } from '../../../../shared/components/spinner/spinner';
 import { Pagination } from '../../../../shared/components/pagination/pagination';
 import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
 import { HeroBanner } from '../../../../shared/components/hero-banner/hero-banner';
-import { CatalogImageUrlPipe } from '../../../../shared/pipes/catalog-image-url.pipe';
+import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
 import { FormsModule } from '@angular/forms';
 import { Callout } from '../../../../shared/components/callout/callout';
 

@@ -1,18 +1,27 @@
-import { describe, it, expect } from 'vitest';
+import { TestBed } from '@angular/core/testing';
+import { describe, it, expect, beforeEach } from 'vitest';
+import { API_BASE_URL } from '@pbd/core';
 import { CatalogImageUrlPipe } from './catalog-image-url.pipe';
-import { environment } from '../../../environments/environment';
 
 describe('CatalogImageUrlPipe', () => {
-  const pipe = new CatalogImageUrlPipe();
+  const apiBaseUrl = 'https://api.realworldangular.org';
+  let pipe: CatalogImageUrlPipe;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [CatalogImageUrlPipe, { provide: API_BASE_URL, useValue: apiBaseUrl }],
+    });
+    pipe = TestBed.inject(CatalogImageUrlPipe);
+  });
 
   it('should build a pizzeria image URL', () => {
     const result = pipe.transform('my-pizzeria.jpg', 'pizzeria');
-    expect(result).toBe(`${environment.apiBaseUrl}/images/pizzerias/my-pizzeria.jpg`);
+    expect(result).toBe(`${apiBaseUrl}/images/pizzerias/my-pizzeria.jpg`);
   });
 
   it('should build a pizza image URL', () => {
     const result = pipe.transform('margherita.png', 'pizza');
-    expect(result).toBe(`${environment.apiBaseUrl}/images/pizzas/margherita.png`);
+    expect(result).toBe(`${apiBaseUrl}/images/pizzas/margherita.png`);
   });
 
   it('should encode special characters in the filename', () => {

@@ -1,4 +1,4 @@
-import type { Address } from '../../shared/models/address.model';
+import type { Address } from '@pbd/shared/models/adress';
 import type { Pizza } from '../pizzerias/models/pizza.models';
 
 export interface PizzaOrderFormDialogData {

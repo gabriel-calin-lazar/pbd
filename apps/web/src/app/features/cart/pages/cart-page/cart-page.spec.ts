@@ -6,6 +6,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { CartPage } from './cart-page';
 import { CartStore, CartData } from '../../cart.store';
 import { Auth } from '@pbd/auth';
+import { API_BASE_URL } from '@pbd/core';
 
 const mockCartData: CartData = {
   pizzeria: { id: 'p1', name: 'Roma', image: 'roma.jpg' },
@@ -62,6 +63,7 @@ describe('CartPage', () => {
         provideRouter([]),
         { provide: CartStore, useValue: cartStoreStub },
         { provide: Auth, useValue: authStub },
+        { provide: API_BASE_URL, useValue: 'https://api.realworldangular.org' },
       ],
     }).overrideComponent(CartPage, { set: { schemas: [NO_ERRORS_SCHEMA] } });
 

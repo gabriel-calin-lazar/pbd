@@ -2,6 +2,7 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { API_BASE_URL } from '@pbd/core';
 import { ImagePicker } from './image-picker';
 
 describe('ImagePicker', () => {
@@ -11,7 +12,10 @@ describe('ImagePicker', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [provideHttpClientTesting()],
+      providers: [
+        provideHttpClientTesting(),
+        { provide: API_BASE_URL, useValue: 'https://api.realworldangular.org' },
+      ],
     }).overrideComponent(ImagePicker, { set: { schemas: [NO_ERRORS_SCHEMA] } });
     fixture = TestBed.createComponent(ImagePicker);
     el = fixture.nativeElement;

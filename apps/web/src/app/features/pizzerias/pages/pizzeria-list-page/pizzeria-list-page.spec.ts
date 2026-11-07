@@ -3,7 +3,7 @@ import { provideHttpClientTesting, HttpTestingController } from '@angular/common
 import { provideRouter } from '@angular/router';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { PizzeriaListPage } from './pizzeria-list-page';
-import { Page } from '@pbd/core';
+import { API_BASE_URL, Page } from '@pbd/core';
 import { PizzeriaSummary } from '../../models/pizzeria.models';
 import { By } from '@angular/platform-browser';
 
@@ -29,7 +29,11 @@ describe('PizzeriaListPage', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [provideHttpClientTesting(), provideRouter([])],
+      providers: [
+        provideHttpClientTesting(),
+        provideRouter([]),
+        { provide: API_BASE_URL, useValue: 'https://api.realworldangular.org' },
+      ],
     });
 
     fixture = TestBed.createComponent(PizzeriaListPage);
