@@ -3,7 +3,7 @@ import { FormField } from '@angular/forms/signals';
 import { CheckoutWizard } from '../../services/checkout-wizard';
 import { Input } from '../../../../shared/components/input/input';
 import { Textarea } from '../../../../shared/components/textarea/textarea';
-import { Button } from '@pbd/core';
+import { Button } from '@pbd/shared/components/button';
 
 @Component({
   selector: 'rw-checkout-schedule-step',

@@ -4,7 +4,7 @@ import { FormField } from '@angular/forms/signals';
 import { CheckoutWizard } from '../../services/checkout-wizard';
 import { CartStore } from '../../../cart/cart.store';
 import { Input } from '../../../../shared/components/input/input';
-import { Button } from '@pbd/core';
+import { Button } from '@pbd/shared/components/button';
 
 @Component({
   selector: 'rw-checkout-review-step',

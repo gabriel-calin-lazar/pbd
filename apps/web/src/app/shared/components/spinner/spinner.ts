@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PizzaLogo } from '@pbd/core';
+import { PizzaLogo } from '@pbd/shared/components/pizza-logo';
 
 @Component({
   selector: 'rw-spinner',

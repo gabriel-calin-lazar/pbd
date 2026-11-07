@@ -5,7 +5,7 @@ import { By } from '@angular/platform-browser';
 import { AdminPizzaListPage } from './admin-pizza-list-page';
 import { AdminPizzaRow } from '../../components/admin-pizza-row/admin-pizza-row';
 import { Pizza } from '../../models/pizza.models';
-import { Button } from '@pbd/core';
+import { Button } from '@pbd/shared/components/button';
 import { Spinner } from '../../../../shared/components/spinner/spinner';
 import { Callout } from '../../../../shared/components/callout/callout';
 import { EmptyState } from '../../../../shared/components/empty-state/empty-state';

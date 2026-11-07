@@ -1,6 +1,3 @@
-export * from './lib/components/avatar';
-export * from './lib/components/button';
-export * from './lib/components/pizza-logo/pizza-logo';
 export * from './lib/core/components/footer/footer';
 export * from './lib/core/components/header/header';
 export * from './lib/core/directives/role.directive';

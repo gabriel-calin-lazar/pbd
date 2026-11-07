@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { DIALOG_DATA, DialogRef } from '@angular/cdk/dialog';
 import { Modal } from '../modal/modal';
 import { ModalFooter } from '../modal/modal-footer';
-import { Button } from '@pbd/core';
+import { Button } from '@pbd/shared/components/button';
 
 export interface ConfirmDialogData {
   title: string;

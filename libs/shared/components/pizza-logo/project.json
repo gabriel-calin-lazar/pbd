@@ -1,0 +1,18 @@
+{
+  "name": "pizza-logo",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/components/pizza-logo/src",
+  "prefix": "rw",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@angular/build:unit-test",
+      "options": {
+        "buildTarget": "web:esbuild:development",
+        "watch": false,
+        "tsConfig": "libs/shared/components/pizza-logo/tsconfig.spec.json"
+      }
+    }
+  }
+}

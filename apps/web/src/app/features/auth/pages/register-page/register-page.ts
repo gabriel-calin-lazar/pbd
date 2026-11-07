@@ -12,7 +12,7 @@ import {
   FormRoot,
 } from '@angular/forms/signals';
 import { Auth } from '@pbd/auth';
-import { Button } from '@pbd/core';
+import { Button } from '@pbd/shared/components/button';
 import { Callout } from '../../../../shared/components/callout/callout';
 import { Input } from '../../../../shared/components/input/input';
 

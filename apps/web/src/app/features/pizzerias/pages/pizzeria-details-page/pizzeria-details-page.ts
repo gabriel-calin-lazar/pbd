@@ -11,7 +11,8 @@ import {
 import { Router, RouterLink } from '@angular/router';
 import { DecimalPipe, NgOptimizedImage } from '@angular/common';
 import { Title } from '@angular/platform-browser';
-import { Button, Page, RoleDirective } from '@pbd/core';
+import { Button } from '@pbd/shared/components/button';
+import { Page, RoleDirective } from '@pbd/core';
 import { Pizza } from '../../models/pizza.models';
 import { Spinner } from '../../../../shared/components/spinner/spinner';
 import { PizzeriaApi } from '../../services/pizzeria-api';

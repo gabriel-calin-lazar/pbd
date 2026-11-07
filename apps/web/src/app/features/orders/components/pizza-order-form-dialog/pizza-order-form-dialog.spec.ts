@@ -9,7 +9,7 @@ import { Pizza } from '../../../pizzerias/models/pizza.models';
 import { CartStore } from '../../../cart/cart.store';
 import { CatalogImageUrlPipe } from '../../../../shared/pipes/catalog-image-url.pipe';
 import { FormField, FormRoot } from '@angular/forms/signals';
-import { Button } from '@pbd/core';
+import { Button } from '@pbd/shared/components/button';
 import { Modal } from '../../../../shared/components/modal/modal';
 import { Input } from '../../../../shared/components/input/input';
 import { Spinner } from '../../../../shared/components/spinner/spinner';

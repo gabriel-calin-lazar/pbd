@@ -2,8 +2,8 @@ import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { Component, HostListener, effect, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Auth } from '@pbd/auth';
-import { Avatar } from '../../../components/avatar/avatar';
-import { PizzaLogo } from '../../../components/pizza-logo/pizza-logo';
+import { Avatar } from '@pbd/shared/components/avatar';
+import { PizzaLogo } from '@pbd/shared/components/pizza-logo';
 import { HEADER_CART } from '../../services/header-cart';
 import { RoleDirective } from '../../directives/role.directive';
 
