@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "strict": true,
     "paths": {
-      "@pbd/auth": ["./libs/core/src/lib/core/services/auth.ts"],
+      "@pbd/auth": ["./libs/core/src/lib/services/auth.ts"],
       "@pbd/core": ["./libs/core/src/index.ts"],
       "@pbd/shared/photon/service": ["./libs/shared/photon/service/src/index.ts"],
       "@pbd/shared/photon/models": ["./libs/shared/photon/models/src/index.ts"],
