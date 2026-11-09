@@ -7,7 +7,7 @@ export default withNativeFederation({
   name: 'web',
   sharedMappings: [
     [['@pbd/auth'], { includeSecondaries: true }],
-    [['@pbd/cart'], { includeSecondaries: true }],
+    [['@pbd/cart-store'], { includeSecondaries: true }],
   ],
   shared: fromPackageJson({
     singleton: true,

@@ -8,10 +8,10 @@ export default withNativeFederation({
   exposes: {
     './Routes': './apps/cart/src/app/features/cart/cart.routes.ts',
   },
-  externals: ['@pbd/auth', '@pbd/cart'],
+  externals: ['@pbd/auth', '@pbd/cart-store'],
   sharedMappings: [
     [['@pbd/auth'], { includeSecondaries: true }],
-    [['@pbd/cart'], { includeSecondaries: true }],
+    [['@pbd/cart-store'], { includeSecondaries: true }],
   ],
   shared: fromPackageJson({
     singleton: true,

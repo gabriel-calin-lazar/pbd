@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { DecimalPipe } from '@angular/common';
 import { FormRoot } from '@angular/forms/signals';
-import { CartStore } from '@pbd/cart';
+import { CartStore } from '@pbd/cart-store';
 import { CheckoutWizard } from '../../services/checkout-wizard';
 import { Callout } from '@pbd/shared/components/callout';
 import { EmptyState } from '@pbd/shared/components/empty-state';

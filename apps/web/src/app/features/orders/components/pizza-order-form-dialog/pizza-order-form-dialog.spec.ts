@@ -6,7 +6,7 @@ import { DialogRef, DIALOG_DATA } from '@angular/cdk/dialog';
 import { PizzaOrderFormDialog } from './pizza-order-form-dialog';
 import { PizzaOrderFormDialogData } from '../../order.models';
 import { Pizza } from '../../../pizzerias/models/pizza.models';
-import { CartStore } from '@pbd/cart';
+import { CartStore } from '@pbd/cart-store';
 import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
 import { FormField, FormRoot } from '@angular/forms/signals';
 import { Button } from '@pbd/shared/components/button';

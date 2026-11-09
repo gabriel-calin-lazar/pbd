@@ -3,7 +3,7 @@ import { Router, provideRouter, UrlTree, PartialMatchRouteSnapshot } from '@angu
 import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { cartNotEmptyGuard } from './cart-not-empty.guard';
-import { CartStore } from '@pbd/cart';
+import { CartStore } from '@pbd/cart-store';
 
 const isEmptySignal = signal(true);
 

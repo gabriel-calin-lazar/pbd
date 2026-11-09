@@ -2,7 +2,7 @@ import { DecimalPipe, NgOptimizedImage } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormField } from '@angular/forms/signals';
 import { CheckoutWizard } from '../../services/checkout-wizard';
-import { CartStore } from '@pbd/cart';
+import { CartStore } from '@pbd/cart-store';
 import { Input } from '@pbd/shared/components/input';
 import { Button } from '@pbd/shared/components/button';
 

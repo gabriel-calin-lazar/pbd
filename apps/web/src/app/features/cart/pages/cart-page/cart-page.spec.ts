@@ -4,7 +4,7 @@ import { provideRouter } from '@angular/router';
 import { NO_ERRORS_SCHEMA, signal, computed } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { CartPage } from './cart-page';
-import { CartStore, CartData } from '@pbd/cart';
+import { CartStore, CartData } from '@pbd/cart-store';
 import { Auth } from '@pbd/auth';
 import { API_BASE_URL } from '@pbd/core';
 

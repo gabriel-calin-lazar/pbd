@@ -4,7 +4,7 @@ import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { Header } from './header';
 import { Auth } from '@pbd/auth';
-import { HEADER_CART } from '@pbd/cart';
+import { HEADER_CART } from '@pbd/cart-store';
 import { User } from '@pbd/auth';
 
 const userSignal = signal<User | null>(null);

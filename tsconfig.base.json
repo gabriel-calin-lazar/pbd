@@ -17,7 +17,7 @@
     "paths": {
       "@pbd/auth": ["./libs/auth/src/index.ts"],
       "@pbd/core": ["./libs/core/src/index.ts"],
-      "@pbd/cart": ["./libs/cart/src/index.ts"],
+      "@pbd/cart-store": ["./libs/cart-store/src/index.ts"],
       "@pbd/shared/photon/service": ["./libs/shared/photon/service/src/index.ts"],
       "@pbd/shared/photon/models": ["./libs/shared/photon/models/src/index.ts"],
       "@pbd/shared/components/avatar": ["./libs/shared/components/avatar/src/index.ts"],

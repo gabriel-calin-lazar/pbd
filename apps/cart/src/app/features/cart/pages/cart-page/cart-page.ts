@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { DecimalPipe, NgOptimizedImage } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Auth } from '@pbd/auth';
-import { CartStore } from '@pbd/cart';
+import { CartStore } from '@pbd/cart-store';
 import { Button } from '@pbd/shared/components/button';
 import { EmptyState } from '@pbd/shared/components/empty-state';
 import { Spinner } from '@pbd/shared/components/spinner';

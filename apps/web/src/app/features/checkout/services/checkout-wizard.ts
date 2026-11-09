@@ -11,7 +11,7 @@ import {
   applyWhenValue,
 } from '@angular/forms/signals';
 import { rxResource } from '@angular/core/rxjs-interop';
-import { CartStore } from '@pbd/cart';
+import { CartStore } from '@pbd/cart-store';
 import { OrderApi } from '../../orders/services/order-api';
 import type { LocationValue } from '@pbd/shared/components/photon-location-field';
 import type { Address } from '@pbd/shared/models/adress';

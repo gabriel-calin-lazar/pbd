@@ -1,7 +1,7 @@
 {
-  "name": "cart",
+  "name": "cart-store",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/cart/src",
+  "sourceRoot": "libs/cart-store/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -10,7 +10,7 @@
       "options": {
         "buildTarget": "web:esbuild:development",
         "watch": false,
-        "tsConfig": "libs/cart/tsconfig.spec.json"
+        "tsConfig": "libs/cart-store/tsconfig.spec.json"
       }
     }
   }

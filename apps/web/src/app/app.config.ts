@@ -12,7 +12,7 @@ import {
   baseUrlInterceptor,
   credentialsInterceptor,
 } from '@pbd/core';
-import { CartStore, HEADER_CART } from '@pbd/cart';
+import { CartStore, HEADER_CART } from '@pbd/cart-store';
 import { Auth } from '@pbd/auth';
 import { environment } from '../environments/environment';
 

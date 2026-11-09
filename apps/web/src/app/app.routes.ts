@@ -27,10 +27,10 @@ export const routes: Routes = [
     path: 'cart',
     loadChildren: () => loadRemoteModule('cart', './Routes'),
   },
-  {
-    path: 'cart-old',
-    loadChildren: () => loadRemoteModule('cart', './Routes'),
-  },
+  // {
+  //   path: 'cart-old',
+  //   loadChildren: () => import('../../../cart/src/app/features/cart/cart.routes'),
+  // },
   {
     path: 'checkout',
     loadChildren: () => import('./features/checkout/checkout.routes').then((m) => m.checkoutRoutes),

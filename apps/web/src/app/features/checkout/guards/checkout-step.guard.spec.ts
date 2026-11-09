@@ -14,7 +14,7 @@ import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { checkoutStepGuard } from './checkout-step.guard';
 import { CheckoutWizard } from '../services/checkout-wizard';
-import { CartStore, CartItem, CartData } from '@pbd/cart';
+import { CartStore, CartItem, CartData } from '@pbd/cart-store';
 import { OrderApi } from '../../orders/services/order-api';
 
 @Component({
