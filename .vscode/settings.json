@@ -4,6 +4,14 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
+  "remote.portsAttributes": {
+    "4201": {
+      "visibility": "public"
+    },
+    "4202": {
+      "visibility": "public"
+    }
+  },
   "[typescript]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
