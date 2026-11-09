@@ -1,0 +1,14 @@
+import { Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    loadComponent: () =>
+      import('./pages/<%= fileName %>-page/<%= fileName %>-page').then(
+        (module) => module.<%= className %>Page,
+      ),
+    title: '<%= className %>',
+  },
+];
+
+export default routes;

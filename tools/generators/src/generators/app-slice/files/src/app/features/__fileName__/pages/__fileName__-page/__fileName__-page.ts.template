@@ -1,0 +1,8 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'rw-<%= fileName %>-page',
+  templateUrl: './<%= fileName %>-page.html',
+  styleUrl: './<%= fileName %>-page.css',
+})
+export class <%= className %>Page {}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "AppSlice",
+  "title": "Create an app slice",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The app slice name (for example, orders).",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What is the app slice name?"
+    },
+    "port": {
+      "type": "integer",
+      "description": "The development server port. Defaults to the next available app port.",
+      "minimum": 1,
+      "maximum": 65535
+    }
+  },
+  "required": ["name"],
+  "additionalProperties": false
+}

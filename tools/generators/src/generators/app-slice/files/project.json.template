@@ -1,0 +1,124 @@
+{
+  "name": "<%= fileName %>",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "rw",
+  "sourceRoot": "apps/<%= fileName %>/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-architects/native-federation:build",
+      "options": {
+        "cacheExternalArtifacts": true,
+        "tsConfig": "apps/<%= fileName %>/tsconfig.federation.json"
+      },
+      "configurations": {
+        "production": {
+          "target": "<%= fileName %>:esbuild:production"
+        },
+        "development": {
+          "target": "<%= fileName %>:esbuild:development",
+          "dev": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "continuous": true,
+      "executor": "@angular-architects/native-federation:build",
+      "options": {
+        "target": "<%= fileName %>:serve-original:development",
+        "tsConfig": "apps/<%= fileName %>/tsconfig.federation.json",
+        "rebuildDelay": 500,
+        "cacheExternalArtifacts": true,
+        "dev": true,
+        "devServer": true,
+        "port": <%= port %>,
+        "buildNotifications": {
+          "enable": true
+        }
+      }
+    },
+    "test": {
+      "executor": "@angular/build:unit-test",
+      "options": {
+        "buildTarget": "<%= fileName %>:esbuild:development",
+        "watch": false,
+        "tsConfig": "apps/<%= fileName %>/tsconfig.spec.json"
+      }
+    },
+    "serve-static": {
+      "continuous": true,
+      "readyWhen": {
+        "signal": true
+      },
+      "dependsOn": ["build"],
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "<%= fileName %>:build",
+        "port": <%= port %>,
+        "staticFilePath": "dist/apps/<%= fileName %>/browser",
+        "spa": true
+      }
+    },
+    "esbuild": {
+      "executor": "@angular/build:application",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/<%= fileName %>",
+        "browser": "apps/<%= fileName %>/src/main.ts",
+        "tsConfig": "apps/<%= fileName %>/tsconfig.app.json",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/<%= fileName %>/public"
+          }
+        ],
+        "styles": ["apps/web/src/styles.css"],
+        "polyfills": ["es-module-shims"]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      }
+    },
+    "serve-original": {
+      "continuous": true,
+      "readyWhen": {
+        "signal": true
+      },
+      "executor": "@angular/build:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "port": <%= port %>
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "<%= fileName %>:esbuild:production"
+        },
+        "development": {
+          "buildTarget": "<%= fileName %>:esbuild:development"
+        }
+      }
+    }
+  }
+}
