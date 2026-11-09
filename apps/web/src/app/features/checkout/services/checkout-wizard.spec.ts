@@ -4,7 +4,7 @@ import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { CheckoutWizard } from './checkout-wizard';
 import { checkoutRoutes } from '../checkout.routes';
-import { CartStore, CartItem, CartData } from '../../cart/cart.store';
+import { CartStore, CartItem, CartData } from '@pbd/cart';
 import { OrderApi } from '../../orders/services/order-api';
 
 const cartStoreStub = {

@@ -5,7 +5,7 @@ import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { CheckoutReviewStep } from './checkout-review-step';
 import { CheckoutWizard } from '../../services/checkout-wizard';
 import { checkoutRoutes } from '../../checkout.routes';
-import { CartStore } from '../../../cart/cart.store';
+import { CartStore } from '@pbd/cart';
 import { OrderApi } from '../../../orders/services/order-api';
 
 const testRoutes: Routes = [{ path: 'checkout', children: checkoutRoutes }];

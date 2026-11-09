@@ -5,7 +5,7 @@ import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { CheckoutScheduleStep } from './checkout-schedule-step';
 import { CheckoutWizard } from '../../services/checkout-wizard';
 import { checkoutRoutes } from '../../checkout.routes';
-import { CartStore, CartItem, CartData } from '../../../cart/cart.store';
+import { CartStore, CartItem, CartData } from '@pbd/cart';
 import { OrderApi } from '../../../orders/services/order-api';
 
 const cartStoreStub = {

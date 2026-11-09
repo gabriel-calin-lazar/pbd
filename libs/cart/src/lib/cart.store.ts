@@ -1,6 +1,6 @@
 import { signal, computed, Service, ResourceParamsStatus } from '@angular/core';
 import { httpResource } from '@angular/common/http';
-import type { HeaderCart } from '@pbd/cart';
+import type { HeaderCart } from './models/header-cart.model';
 
 export interface CartPizzeria {
   id: string;

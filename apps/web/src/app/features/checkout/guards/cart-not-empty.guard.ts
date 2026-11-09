@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { CanMatchFn, Router } from '@angular/router';
-import { CartStore } from '../../cart/cart.store';
+import { CartStore } from '@pbd/cart';
 
 export const cartNotEmptyGuard: CanMatchFn = () => {
   const cartStore = inject(CartStore);

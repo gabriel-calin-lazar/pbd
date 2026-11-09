@@ -2,7 +2,7 @@ import { Component, computed, effect, inject, signal } from '@angular/core';
 import { DecimalPipe, NgOptimizedImage } from '@angular/common';
 import { DialogRef, DIALOG_DATA } from '@angular/cdk/dialog';
 import { form, FormField, FormRoot, min, required } from '@angular/forms/signals';
-import { CartStore } from '../../../cart/cart.store';
+import { CartStore } from '@pbd/cart';
 import { PizzaOption } from '../../../pizzerias/models/pizza.models';
 import { PizzaApi } from '../../../pizzerias/services/pizza-api';
 import { OrderApi } from '../../services/order-api';

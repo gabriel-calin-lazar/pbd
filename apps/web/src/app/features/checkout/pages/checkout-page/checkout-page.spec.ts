@@ -6,7 +6,7 @@ import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { Dialog } from '@angular/cdk/dialog';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { CheckoutPage } from './checkout-page';
-import { CartStore, CartData, CartItem } from '../../../cart/cart.store';
+import { CartStore, CartData, CartItem } from '@pbd/cart';
 import { CheckoutWizard } from '../../services/checkout-wizard';
 import { OrderApi } from '../../../orders/services/order-api';
 

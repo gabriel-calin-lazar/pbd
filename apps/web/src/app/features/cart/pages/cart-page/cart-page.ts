@@ -2,7 +2,7 @@ import { Component, effect, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgOptimizedImage, DecimalPipe } from '@angular/common';
 import { Title } from '@angular/platform-browser';
-import { CartStore } from '../../cart.store';
+import { CartStore } from '@pbd/cart';
 import { Auth } from '@pbd/auth';
 import { Button } from '@pbd/shared/components/button';
 import { EmptyState } from '@pbd/shared/components/empty-state';

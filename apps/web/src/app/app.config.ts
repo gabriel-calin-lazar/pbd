@@ -12,9 +12,8 @@ import {
   baseUrlInterceptor,
   credentialsInterceptor,
 } from '@pbd/core';
-import { HEADER_CART } from '@pbd/cart';
+import { CartStore, HEADER_CART } from '@pbd/cart';
 import { Auth } from '@pbd/auth';
-import { CartStore } from './features/cart/cart.store';
 import { environment } from '../environments/environment';
 
 export const appConfig: ApplicationConfig = {

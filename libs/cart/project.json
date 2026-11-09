@@ -4,5 +4,14 @@
   "sourceRoot": "libs/cart/src",
   "projectType": "library",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "test": {
+      "executor": "@angular/build:unit-test",
+      "options": {
+        "buildTarget": "web:esbuild:development",
+        "watch": false,
+        "tsConfig": "libs/cart/tsconfig.spec.json"
+      }
+    }
+  }
 }
