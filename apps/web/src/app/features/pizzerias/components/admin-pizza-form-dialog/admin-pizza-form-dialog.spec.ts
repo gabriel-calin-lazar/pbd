@@ -8,10 +8,10 @@ import { AdminPizzaFormDialog } from './admin-pizza-form-dialog';
 import { FormValueControl, FormField, FormRoot, ValidationError } from '@angular/forms/signals';
 import { Pizza } from '../../models/pizza.models';
 import { Button } from '@pbd/shared/components/button';
-import { Callout } from '../../../../shared/components/callout/callout';
-import { Input } from '../../../../shared/components/input/input';
-import { Modal } from '../../../../shared/components/modal/modal';
-import { ModalFooter } from '../../../../shared/components/modal/modal-footer';
+import { Callout } from '@pbd/shared/components/callout';
+import { Input } from '@pbd/shared/components/input';
+import { Modal } from '@pbd/shared/components/modal';
+import { ModalFooter } from '@pbd/shared/components/modal';
 
 const mockPizza: Pizza = {
   id: 'p1',

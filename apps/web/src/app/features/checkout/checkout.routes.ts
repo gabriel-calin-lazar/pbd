@@ -9,7 +9,7 @@ import {
   ConfirmDialog,
   ConfirmDialogData,
   ConfirmDialogResult,
-} from '../../shared/components/confirm-dialog/confirm-dialog';
+} from '@pbd/shared/components/confirm-dialog';
 
 function checkoutDeactivateGuard(): boolean | Observable<boolean> {
   const wizard = inject(CheckoutWizard);

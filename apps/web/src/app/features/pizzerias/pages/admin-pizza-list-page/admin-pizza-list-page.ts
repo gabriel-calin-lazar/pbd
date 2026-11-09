@@ -1,11 +1,11 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { PizzaApi } from '../../services/pizza-api';
-import { Callout } from '../../../../shared/components/callout/callout';
+import { Callout } from '@pbd/shared/components/callout';
 import { Pizza } from '../../models/pizza.models';
 import { Button } from '@pbd/shared/components/button';
-import { Spinner } from '../../../../shared/components/spinner/spinner';
-import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
+import { Spinner } from '@pbd/shared/components/spinner';
+import { EmptyState } from '@pbd/shared/components/empty-state';
 import { Dialog } from '@angular/cdk/dialog';
 import { AdminPizzaFormDialog } from '../../components/admin-pizza-form-dialog/admin-pizza-form-dialog';
 import { AdminPizzaRow } from '../../components/admin-pizza-row/admin-pizza-row';

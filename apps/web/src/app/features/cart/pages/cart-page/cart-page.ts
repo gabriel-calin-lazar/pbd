@@ -5,8 +5,8 @@ import { Title } from '@angular/platform-browser';
 import { CartStore } from '../../cart.store';
 import { Auth } from '@pbd/auth';
 import { Button } from '@pbd/shared/components/button';
-import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
-import { Spinner } from '../../../../shared/components/spinner/spinner';
+import { EmptyState } from '@pbd/shared/components/empty-state';
+import { Spinner } from '@pbd/shared/components/spinner';
 import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
 
 @Component({

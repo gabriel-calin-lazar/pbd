@@ -4,8 +4,8 @@ import { DecimalPipe } from '@angular/common';
 import { FormRoot } from '@angular/forms/signals';
 import { CartStore } from '../../../cart/cart.store';
 import { CheckoutWizard } from '../../services/checkout-wizard';
-import { Callout } from '../../../../shared/components/callout/callout';
-import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
+import { Callout } from '@pbd/shared/components/callout';
+import { EmptyState } from '@pbd/shared/components/empty-state';
 import { CheckoutProgressStepper } from '../../components/checkout-progress-stepper/checkout-progress-stepper';
 
 @Component({

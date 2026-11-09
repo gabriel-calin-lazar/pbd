@@ -4,8 +4,8 @@ import { Router, RouterLink } from '@angular/router';
 import { form, FormField, required, email, FormRoot } from '@angular/forms/signals';
 import { Auth } from '@pbd/auth';
 import { Button } from '@pbd/shared/components/button';
-import { Callout } from '../../../../shared/components/callout/callout';
-import { Input } from '../../../../shared/components/input/input';
+import { Callout } from '@pbd/shared/components/callout';
+import { Input } from '@pbd/shared/components/input';
 import { firstValueFrom } from 'rxjs';
 
 @Component({

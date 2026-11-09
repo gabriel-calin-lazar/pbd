@@ -7,7 +7,7 @@ import { provideRouter } from '@angular/router';
 import { FormValueControl, FormField, FormRoot, ValidationError } from '@angular/forms/signals';
 import { LocationValue } from '@pbd/core';
 import { Button } from '@pbd/shared/components/button';
-import { Callout } from '../../../../shared/components/callout/callout';
+import { Callout } from '@pbd/shared/components/callout';
 
 @Component({ template: '' })
 class StubComponent {}

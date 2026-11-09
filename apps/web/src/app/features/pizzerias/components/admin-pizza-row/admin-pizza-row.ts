@@ -9,7 +9,7 @@ import {
   ConfirmDialog,
   ConfirmDialogData,
   ConfirmDialogResult,
-} from '../../../../shared/components/confirm-dialog/confirm-dialog';
+} from '@pbd/shared/components/confirm-dialog';
 
 @Component({
   selector: '[rw-admin-pizza-row]',

@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { FormField } from '@angular/forms/signals';
 import { CheckoutWizard } from '../../services/checkout-wizard';
-import { PhotonLocationField } from '../../../../shared/components/photon-location-field/photon-location-field';
-import { Input } from '../../../../shared/components/input/input';
+import { PhotonLocationField } from '@pbd/shared/components/photon-location-field';
+import { Input } from '@pbd/shared/components/input';
 import { Button } from '@pbd/shared/components/button';
 
 @Component({

@@ -1,4 +1,5 @@
 import type { Address } from '@pbd/shared/models/adress';
+import type { OrderStatus } from '@pbd/shared/components/status-badge';
 import type { Pizza } from '../pizzerias/models/pizza.models';
 
 export interface PizzaOrderFormDialogData {
@@ -6,8 +7,6 @@ export interface PizzaOrderFormDialogData {
   pizzeriaId: string;
   displayPizzeriaName: string;
 }
-
-export type OrderStatus = 'PENDING' | 'PREPARING' | 'READY' | 'DELIVERED' | 'CANCELLED';
 
 /** Snapshot saved on each order line item at checkout time. */
 export type OrderItemSelectedOption =

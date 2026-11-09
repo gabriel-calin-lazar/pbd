@@ -4,8 +4,8 @@ import { NgOptimizedImage } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { PizzeriaApi } from '../../services/pizzeria-api';
 import { RoleDirective } from '@pbd/core';
-import { Spinner } from '../../../../shared/components/spinner/spinner';
-import { Callout } from '../../../../shared/components/callout/callout';
+import { Spinner } from '@pbd/shared/components/spinner';
+import { Callout } from '@pbd/shared/components/callout';
 
 @Component({
   selector: 'rw-admin-pizzeria-page',

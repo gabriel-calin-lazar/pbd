@@ -9,12 +9,6 @@ import { Pizza } from '../models/pizza.models';
 export class PizzeriaApi {
   private readonly http = inject(HttpClient);
 
-  public getImagesResource(): ResourceRef<string[]> {
-    return httpResource<string[]>(() => '/api/pizzerias/images', {
-      defaultValue: [],
-    });
-  }
-
   public getMyPizzeria(): Observable<PizzeriaDetail> {
     return this.http.get<PizzeriaDetail>('/api/pizzerias/admin/pizzeria');
   }

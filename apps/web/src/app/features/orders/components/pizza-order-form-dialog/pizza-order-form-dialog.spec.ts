@@ -10,9 +10,9 @@ import { CartStore } from '../../../cart/cart.store';
 import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
 import { FormField, FormRoot } from '@angular/forms/signals';
 import { Button } from '@pbd/shared/components/button';
-import { Modal } from '../../../../shared/components/modal/modal';
-import { Input } from '../../../../shared/components/input/input';
-import { Spinner } from '../../../../shared/components/spinner/spinner';
+import { Modal } from '@pbd/shared/components/modal';
+import { Input } from '@pbd/shared/components/input';
+import { Spinner } from '@pbd/shared/components/spinner';
 import { SizeOptionField } from '../pizza-size-option-field/pizza-size-option-field';
 import { API_BASE_URL } from '@pbd/core';
 

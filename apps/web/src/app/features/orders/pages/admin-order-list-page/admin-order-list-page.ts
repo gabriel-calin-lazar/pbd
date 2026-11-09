@@ -1,10 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
-import { Callout } from '../../../../shared/components/callout/callout';
+import { Callout } from '@pbd/shared/components/callout';
 import { OrderApi } from '../../services/order-api';
 import { AdminOrderListItem } from '../../order.models';
-import { Spinner } from '../../../../shared/components/spinner/spinner';
-import { Pagination } from '../../../../shared/components/pagination/pagination';
-import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
+import { Spinner } from '@pbd/shared/components/spinner';
+import { Pagination } from '@pbd/shared/components/pagination';
+import { EmptyState } from '@pbd/shared/components/empty-state';
 import { AdminOrderRow } from './admin-order-row/admin-order-row';
 
 @Component({

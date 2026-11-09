@@ -14,9 +14,9 @@ import { Title } from '@angular/platform-browser';
 import { Button } from '@pbd/shared/components/button';
 import { Page, RoleDirective } from '@pbd/core';
 import { Pizza } from '../../models/pizza.models';
-import { Spinner } from '../../../../shared/components/spinner/spinner';
+import { Spinner } from '@pbd/shared/components/spinner';
 import { PizzeriaApi } from '../../services/pizzeria-api';
-import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
+import { EmptyState } from '@pbd/shared/components/empty-state';
 import { PizzaOrderFormDialog } from '../../../orders/components/pizza-order-form-dialog/pizza-order-form-dialog';
 import { PizzaOrderFormDialogData } from '../../../orders/order.models';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
@@ -25,7 +25,7 @@ import { merge, of, Subject, timer } from 'rxjs';
 import { form, FormRoot, FormField, debounce } from '@angular/forms/signals';
 import { Dialog } from '@angular/cdk/dialog';
 import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
-import { LoadMore } from '../../../../shared/components/load-more/load-more';
+import { LoadMore } from '@pbd/shared/components/load-more';
 
 interface FilterFormModel {
   searchName: string;

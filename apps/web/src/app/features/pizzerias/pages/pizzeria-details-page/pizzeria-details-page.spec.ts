@@ -5,7 +5,7 @@ import { describe, it, expect, beforeAll, beforeEach, afterEach, vi } from 'vite
 import { signal } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { PizzeriaDetailsPage } from './pizzeria-details-page';
-import { LoadMore } from '../../../../shared/components/load-more/load-more';
+import { LoadMore } from '@pbd/shared/components/load-more';
 import { PizzeriaDetail } from '../../models/pizzeria.models';
 import { Pizza } from '../../models/pizza.models';
 import { Auth } from '@pbd/auth';

@@ -9,8 +9,8 @@ import {
   ConfirmDialog,
   ConfirmDialogData,
   ConfirmDialogResult,
-} from '../../../../../shared/components/confirm-dialog/confirm-dialog';
-import { StatusBadge } from '../../../../../shared/components/status-badge/status-badge';
+} from '@pbd/shared/components/confirm-dialog';
+import { StatusBadge } from '@pbd/shared/components/status-badge';
 
 @Component({
   selector: 'tr[rw-admin-order-row]',

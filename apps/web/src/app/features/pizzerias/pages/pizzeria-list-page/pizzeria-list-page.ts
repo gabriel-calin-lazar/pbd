@@ -10,13 +10,13 @@ import {
 import { RouterLink } from '@angular/router';
 import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { PizzeriaApi } from '../../services/pizzeria-api';
-import { Spinner } from '../../../../shared/components/spinner/spinner';
-import { Pagination } from '../../../../shared/components/pagination/pagination';
-import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
-import { HeroBanner } from '../../../../shared/components/hero-banner/hero-banner';
+import { Spinner } from '@pbd/shared/components/spinner';
+import { Pagination } from '@pbd/shared/components/pagination';
+import { EmptyState } from '@pbd/shared/components/empty-state';
+import { HeroBanner } from '@pbd/shared/components/hero-banner';
 import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
 import { FormsModule } from '@angular/forms';
-import { Callout } from '../../../../shared/components/callout/callout';
+import { Callout } from '@pbd/shared/components/callout';
 
 @Component({
   selector: 'rw-pizzeria-list-page',

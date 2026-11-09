@@ -2,11 +2,11 @@ import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormField, form, required, FormRoot } from '@angular/forms/signals';
 import { PizzeriaApi } from '../../services/pizzeria-api';
-import { Callout } from '../../../../shared/components/callout/callout';
+import { Callout } from '@pbd/shared/components/callout';
 import { Button } from '@pbd/shared/components/button';
 import { LocationValue } from '@pbd/core';
-import { ImagePicker } from '../../../../shared/components/image-picker/image-picker';
-import { PhotonLocationField } from '../../../../shared/components/photon-location-field/photon-location-field';
+import { ImagePicker } from '@pbd/shared/components/image-picker';
+import { PhotonLocationField } from '@pbd/shared/components/photon-location-field';
 import { firstValueFrom } from 'rxjs';
 
 interface PizzeriaForm {

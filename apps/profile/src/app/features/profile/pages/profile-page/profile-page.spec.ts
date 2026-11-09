@@ -1,6 +1,7 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
 import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
+import { Router } from '@angular/router';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { ProfilePage } from './profile-page';
 import { Auth } from '@pbd/auth';
@@ -13,6 +14,9 @@ const authStub = {
   user: userSignal,
   logout: vi.fn(),
 };
+const routerStub = {
+  navigate: vi.fn(),
+};
 
 describe('ProfilePage', () => {
   let fixture: ComponentFixture<ProfilePage>;
@@ -21,6 +25,7 @@ describe('ProfilePage', () => {
 
   beforeEach(async () => {
     userSignal.set(mockUser);
+    routerStub.navigate.mockClear();
     authStub.logout.mockReturnValue({
       pipe: (): { subscribe: (obs: { next?: () => void }) => void } => ({
         subscribe: (obs) => obs.next?.(),
@@ -28,7 +33,11 @@ describe('ProfilePage', () => {
     });
 
     TestBed.configureTestingModule({
-      providers: [provideHttpClientTesting(), { provide: Auth, useValue: authStub }],
+      providers: [
+        provideHttpClientTesting(),
+        { provide: Auth, useValue: authStub },
+        { provide: Router, useValue: routerStub },
+      ],
     }).overrideComponent(ProfilePage, { set: { schemas: [NO_ERRORS_SCHEMA] } });
 
     fixture = TestBed.createComponent(ProfilePage);
@@ -51,5 +60,11 @@ describe('ProfilePage', () => {
 
   it('should show the log out button', () => {
     expect(el.querySelector('rw-button')).not.toBeNull();
+  });
+
+  it('should navigate to details after logging out', () => {
+    el.querySelector('rw-button')?.dispatchEvent(new Event('click', { bubbles: true }));
+
+    expect(routerStub.navigate).toHaveBeenCalledWith(['/details']);
   });
 });

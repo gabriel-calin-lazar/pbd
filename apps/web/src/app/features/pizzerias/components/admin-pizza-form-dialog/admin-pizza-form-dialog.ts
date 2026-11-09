@@ -3,13 +3,13 @@ import { DecimalPipe } from '@angular/common';
 import { form, FormField, required, disabled, FormRoot, submit, min } from '@angular/forms/signals';
 import { DialogRef, DIALOG_DATA } from '@angular/cdk/dialog';
 import { PizzaApi } from '../../services/pizza-api';
-import { Callout } from '../../../../shared/components/callout/callout';
+import { Callout } from '@pbd/shared/components/callout';
 import { Pizza } from '../../models/pizza.models';
-import { Input } from '../../../../shared/components/input/input';
+import { Input } from '@pbd/shared/components/input';
 import { Button } from '@pbd/shared/components/button';
-import { ImagePicker } from '../../../../shared/components/image-picker/image-picker';
-import { Modal } from '../../../../shared/components/modal/modal';
-import { ModalFooter } from '../../../../shared/components/modal/modal-footer';
+import { ImagePicker } from '@pbd/shared/components/image-picker';
+import { Modal } from '@pbd/shared/components/modal';
+import { ModalFooter } from '@pbd/shared/components/modal';
 import { firstValueFrom } from 'rxjs';
 
 interface AdminPizzaFormModel {

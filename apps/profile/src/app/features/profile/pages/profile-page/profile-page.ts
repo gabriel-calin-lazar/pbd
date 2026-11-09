@@ -1,5 +1,6 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Router } from '@angular/router';
 import { Auth } from '@pbd/auth';
 import { Avatar } from '@pbd/shared/components/avatar';
 import { Button } from '@pbd/shared/components/button';
@@ -13,6 +14,7 @@ import { Button } from '@pbd/shared/components/button';
 export class ProfilePage {
   private readonly auth = inject(Auth);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly router = inject(Router);
 
   protected readonly isLoggingOut = signal(false);
   protected readonly user = this.auth.user;
@@ -24,7 +26,9 @@ export class ProfilePage {
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
         next: () => {
-          window.location.href = '/';
+          // does not work as user is still logged in when the page is reloaded, so we navigate to details page instead
+          // window.location.href = '/';
+          this.router.navigate(['/']);
         },
       });
   }

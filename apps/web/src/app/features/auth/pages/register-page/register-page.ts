@@ -13,8 +13,8 @@ import {
 } from '@angular/forms/signals';
 import { Auth } from '@pbd/auth';
 import { Button } from '@pbd/shared/components/button';
-import { Callout } from '../../../../shared/components/callout/callout';
-import { Input } from '../../../../shared/components/input/input';
+import { Callout } from '@pbd/shared/components/callout';
+import { Input } from '@pbd/shared/components/input';
 
 @Component({
   selector: 'rw-register-page',

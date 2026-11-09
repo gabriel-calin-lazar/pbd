@@ -3,12 +3,12 @@ import { RouterLink } from '@angular/router';
 import { DecimalPipe, DatePipe, DOCUMENT } from '@angular/common';
 import { Auth } from '@pbd/auth';
 import { OrderApi } from '../../services/order-api';
-import { Spinner } from '../../../../shared/components/spinner/spinner';
-import { Pagination } from '../../../../shared/components/pagination/pagination';
-import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
-import { Callout } from '../../../../shared/components/callout/callout';
+import { Spinner } from '@pbd/shared/components/spinner';
+import { Pagination } from '@pbd/shared/components/pagination';
+import { EmptyState } from '@pbd/shared/components/empty-state';
+import { Callout } from '@pbd/shared/components/callout';
 import { Title } from '@angular/platform-browser';
-import { StatusBadge } from '../../../../shared/components/status-badge/status-badge';
+import { StatusBadge } from '@pbd/shared/components/status-badge';
 
 @Component({
   selector: 'rw-orders-list-page',

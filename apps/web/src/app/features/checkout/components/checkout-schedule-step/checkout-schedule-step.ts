@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { FormField } from '@angular/forms/signals';
 import { CheckoutWizard } from '../../services/checkout-wizard';
-import { Input } from '../../../../shared/components/input/input';
-import { Textarea } from '../../../../shared/components/textarea/textarea';
+import { Input } from '@pbd/shared/components/input';
+import { Textarea } from '@pbd/shared/components/textarea';
 import { Button } from '@pbd/shared/components/button';
 
 @Component({

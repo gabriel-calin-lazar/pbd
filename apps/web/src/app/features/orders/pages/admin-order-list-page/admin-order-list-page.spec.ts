@@ -6,10 +6,10 @@ import { AdminOrderRow } from './admin-order-row/admin-order-row';
 import { Page } from '@pbd/core';
 import { AdminOrderListItem } from '../../order.models';
 import { By } from '@angular/platform-browser';
-import { Spinner } from '../../../../shared/components/spinner/spinner';
-import { Pagination } from '../../../../shared/components/pagination/pagination';
-import { Callout } from '../../../../shared/components/callout/callout';
-import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
+import { Spinner } from '@pbd/shared/components/spinner';
+import { Pagination } from '@pbd/shared/components/pagination';
+import { Callout } from '@pbd/shared/components/callout';
+import { EmptyState } from '@pbd/shared/components/empty-state';
 
 const mockOrder: AdminOrderListItem = {
   id: 'order1',

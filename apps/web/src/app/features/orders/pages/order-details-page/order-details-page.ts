@@ -3,14 +3,14 @@ import { RouterLink } from '@angular/router';
 import { DecimalPipe, DatePipe, TitleCasePipe } from '@angular/common';
 import { rxResource, takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { OrderApi } from '../../services/order-api';
-import { Callout } from '../../../../shared/components/callout/callout';
+import { Callout } from '@pbd/shared/components/callout';
 import { Order } from '../../order.models';
-import { Spinner } from '../../../../shared/components/spinner/spinner';
+import { Spinner } from '@pbd/shared/components/spinner';
 import { Button } from '@pbd/shared/components/button';
-import { EmptyState } from '../../../../shared/components/empty-state/empty-state';
+import { EmptyState } from '@pbd/shared/components/empty-state';
 import { Observable } from 'rxjs';
 import { Title } from '@angular/platform-browser';
-import { StatusBadge } from '../../../../shared/components/status-badge/status-badge';
+import { StatusBadge } from '@pbd/shared/components/status-badge';
 import { environment } from '../../../../../environments/environment';
 
 @Component({
