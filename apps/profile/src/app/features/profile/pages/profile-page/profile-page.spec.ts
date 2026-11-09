@@ -4,7 +4,7 @@ import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { ProfilePage } from './profile-page';
 import { Auth } from '@pbd/auth';
-import { User } from '@pbd/core';
+import { User } from '@pbd/auth';
 
 const mockUser: User = { id: '1', email: 'test@example.com', role: 'CUSTOMER', name: 'Test User' };
 const userSignal = signal<User | null>(mockUser);

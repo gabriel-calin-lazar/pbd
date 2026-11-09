@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
-import { Role, roleGuard } from '@pbd/core';
+import { Role } from '@pbd/auth';
+import { roleGuard } from '@pbd/core';
 
 export const ordersRoutes: Routes = [
   {

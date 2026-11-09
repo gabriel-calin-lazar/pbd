@@ -6,7 +6,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { AdminPizzeriaDetailsPage } from './admin-pizzeria-details-page';
 import { PizzeriaDetail } from '../../models/pizzeria.models';
 import { Auth } from '@pbd/auth';
-import { User } from '@pbd/core';
+import { User } from '@pbd/auth';
 
 const mockPizzeria: PizzeriaDetail = {
   id: 'p1',

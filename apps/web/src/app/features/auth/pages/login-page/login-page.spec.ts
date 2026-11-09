@@ -5,7 +5,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { LoginPage } from './login-page';
 import { Auth } from '@pbd/auth';
-import { User } from '@pbd/core';
+import { User } from '@pbd/auth';
 
 const mockUser: User = { id: '1', email: 'test@example.com', role: 'CUSTOMER', name: 'Test' };
 

@@ -10,5 +10,3 @@ export * from './lib/models/location.model';
 export * from './lib/models/pagination.model';
 export * from './lib/tokens/header-cart';
 export * from './lib/tokens/api-base-url';
-export { Role } from '@pbd/auth';
-export type { User } from '@pbd/auth';
