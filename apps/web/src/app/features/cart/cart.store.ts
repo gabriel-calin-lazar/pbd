@@ -1,5 +1,6 @@
 import { signal, computed, Service, ResourceParamsStatus } from '@angular/core';
 import { httpResource } from '@angular/common/http';
+import type { HeaderCart } from '@pbd/cart';
 
 export interface CartPizzeria {
   id: string;
@@ -42,7 +43,7 @@ export interface CartData {
 }
 
 @Service()
-export class CartStore {
+export class CartStore implements HeaderCart {
   public readonly pizzeria = signal<CartPizzeria | null>(null);
   public readonly items = signal<CartItem[]>([]);
 

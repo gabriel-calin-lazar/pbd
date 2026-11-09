@@ -13,7 +13,7 @@ import {
 import { rxResource } from '@angular/core/rxjs-interop';
 import { CartStore } from '../../cart/cart.store';
 import { OrderApi } from '../../orders/services/order-api';
-import type { LocationValue } from '@pbd/core';
+import type { LocationValue } from '@pbd/shared/components/photon-location-field';
 import type { Address } from '@pbd/shared/models/adress';
 import { CouponValidation } from '../../orders/order.models';
 

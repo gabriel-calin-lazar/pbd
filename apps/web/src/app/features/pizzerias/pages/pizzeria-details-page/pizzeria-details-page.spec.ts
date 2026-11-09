@@ -10,7 +10,8 @@ import { PizzeriaDetail } from '../../models/pizzeria.models';
 import { Pizza } from '../../models/pizza.models';
 import { Auth } from '@pbd/auth';
 import { User } from '@pbd/auth';
-import { API_BASE_URL, Page } from '@pbd/core';
+import { API_BASE_URL } from '@pbd/core';
+import { Page } from '@pbd/shared/components/pagination';
 
 const mockPizzeria: PizzeriaDetail = {
   id: 'p1',

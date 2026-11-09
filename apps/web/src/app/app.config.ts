@@ -11,8 +11,8 @@ import {
   API_BASE_URL,
   baseUrlInterceptor,
   credentialsInterceptor,
-  HEADER_CART,
 } from '@pbd/core';
+import { HEADER_CART } from '@pbd/cart';
 import { Auth } from '@pbd/auth';
 import { CartStore } from './features/cart/cart.store';
 import { environment } from '../environments/environment';

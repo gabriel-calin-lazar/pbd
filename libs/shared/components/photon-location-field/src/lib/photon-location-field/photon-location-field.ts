@@ -2,8 +2,8 @@ import { Component, computed, effect, injectAsync, input, model, signal } from '
 import { rxResource, toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { debounceTime, distinctUntilChanged, from, map, of } from 'rxjs';
 import { FormValueControl, ValidationError, WithOptionalFieldTree } from '@angular/forms/signals';
-import { LocationValue } from '@pbd/core';
 import { PhotonLocationSuggestion, PhotonQuery } from '@pbd/shared/photon/models';
+import { LocationValue } from './location-value.model';
 import { switchMap } from 'rxjs/operators';
 
 let nextFieldId = 0;

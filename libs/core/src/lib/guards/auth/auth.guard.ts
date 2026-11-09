@@ -2,8 +2,6 @@ import { inject } from '@angular/core';
 import { CanMatchFn, Router } from '@angular/router';
 import { Auth } from '@pbd/auth';
 
-// TODO separate in 2 files - each with specific tests
-
 export const authGuard: CanMatchFn = () => {
   const auth = inject(Auth);
   const router = inject(Router);

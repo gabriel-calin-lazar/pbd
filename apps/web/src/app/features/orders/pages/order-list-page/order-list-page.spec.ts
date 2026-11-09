@@ -5,7 +5,7 @@ import { NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { OrdersListPage } from './order-list-page';
 import { Auth } from '@pbd/auth';
-import { Page } from '@pbd/core';
+import { Page } from '@pbd/shared/components/pagination';
 import { Order } from '../../order.models';
 import { By } from '@angular/platform-browser';
 

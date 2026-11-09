@@ -40,7 +40,6 @@ export class AdminPizzaListPage {
       AdminPizzaFormDialog
     >(AdminPizzaFormDialog, {
       data: pizza,
-      // TODO include toppings as well
     });
 
     ref.closed.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((event) => {

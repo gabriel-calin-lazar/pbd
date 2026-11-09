@@ -5,7 +5,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { AdminPizzeriaFormPage } from './admin-pizzeria-form-page';
 import { provideRouter } from '@angular/router';
 import { FormValueControl, FormField, FormRoot, ValidationError } from '@angular/forms/signals';
-import { LocationValue } from '@pbd/core';
+import { LocationValue } from '@pbd/shared/components/photon-location-field';
 import { Button } from '@pbd/shared/components/button';
 import { Callout } from '@pbd/shared/components/callout';
 

@@ -1,7 +1,7 @@
 import { inject, Signal, ResourceRef, ResourceParamsStatus, Service } from '@angular/core';
 import { HttpClient, httpResource } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Page } from '@pbd/core';
+import { Page } from '@pbd/shared/components/pagination';
 import { PizzeriaDetail, PizzeriaSummary } from '../models/pizzeria.models';
 import { Pizza } from '../models/pizza.models';
 

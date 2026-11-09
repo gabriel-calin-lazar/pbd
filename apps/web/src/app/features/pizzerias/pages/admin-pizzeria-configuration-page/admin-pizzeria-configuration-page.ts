@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 import { PizzeriaApi } from '../../services/pizzeria-api';
 import { Callout } from '@pbd/shared/components/callout';
 import { Button } from '@pbd/shared/components/button';
-import { LocationValue } from '@pbd/core';
+import { LocationValue } from '@pbd/shared/components/photon-location-field';
 import { ImagePicker } from '@pbd/shared/components/image-picker';
 import { PhotonLocationField } from '@pbd/shared/components/photon-location-field';
 import { Spinner } from '@pbd/shared/components/spinner';
