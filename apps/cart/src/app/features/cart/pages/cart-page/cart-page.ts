@@ -1,0 +1,37 @@
+import { Component, effect, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { DecimalPipe, NgOptimizedImage } from '@angular/common';
+import { Title } from '@angular/platform-browser';
+import { Auth } from '@pbd/auth';
+import { CartStore } from '@pbd/cart';
+import { Button } from '@pbd/shared/components/button';
+import { EmptyState } from '@pbd/shared/components/empty-state';
+import { Spinner } from '@pbd/shared/components/spinner';
+import { CatalogImageUrlPipe } from '@pbd/shared/pipes/catalog-image-url';
+
+@Component({
+  selector: 'rw-cart-page',
+  imports: [
+    RouterLink,
+    NgOptimizedImage,
+    DecimalPipe,
+    Button,
+    EmptyState,
+    Spinner,
+    CatalogImageUrlPipe,
+  ],
+  templateUrl: './cart-page.html',
+  styleUrl: './cart-page.css',
+})
+export class CartPage {
+  private readonly title = inject(Title);
+  protected readonly cartStore = inject(CartStore);
+  protected readonly auth = inject(Auth);
+
+  public constructor() {
+    effect(() => {
+      const name = this.cartStore.cart()?.pizzeria.name;
+      this.title.setTitle(name ? `Cart - ${name}` : 'Cart');
+    });
+  }
+}
