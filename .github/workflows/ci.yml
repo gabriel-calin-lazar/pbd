@@ -6,13 +6,24 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  actions: read
+  contents: read
+
+env:
+  NX_BRANCH: ${{ github.event.number || github.ref_name }}
+  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+  NX_CLOUD_DISTRIBUTED_EXECUTION: ${{ secrets.NX_CLOUD_ACCESS_TOKEN != '' }}
+
 jobs:
-  build:
-    name: Build
+  validation:
+    name: Lint, Tests, and Build
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -22,44 +33,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npx nx run-many -t build
+      - name: Derive base and head SHAs
+        uses: nrwl/nx-set-shas@v4
 
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
+      - name: Start two Nx Cloud agents
+        if: env.NX_CLOUD_ACCESS_TOKEN != ''
+        run: npx nx-cloud start-ci-run --distribute-on="2 linux-medium-js" --stop-agents-after=build
 
-    steps:
-      - uses: actions/checkout@v4
+      - name: Check formatting of affected files
+        if: github.event_name == 'pull_request'
+        run: npx nx format:check --base="$NX_BASE" --head="$NX_HEAD"
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Lint
-        run: npx nx run-many -t lint
-
-      - name: Prettier check
+      - name: Check formatting of all files
+        if: github.event_name == 'push'
         run: npx nx format:check
 
-  test:
-    name: Unit Tests
-    runs-on: ubuntu-latest
+      - name: Run affected lint, tests, and builds
+        if: github.event_name == 'pull_request'
+        run: npx nx affected -t lint,test,build --base="$NX_BASE" --head="$NX_HEAD"
 
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run unit tests
-        run: npx nx run-many -t test
+      - name: Run lint, tests, and builds for all projects
+        if: github.event_name == 'push'
+        run: npx nx run-many -t lint,test,build
