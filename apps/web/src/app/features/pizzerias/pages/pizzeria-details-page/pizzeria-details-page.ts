@@ -12,7 +12,7 @@ import { Router, RouterLink } from '@angular/router';
 import { DecimalPipe, NgOptimizedImage } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Button } from '@pbd/shared/components/button';
-import { RoleDirective } from '@pbd/core';
+import { RoleDirective } from '@pbd/shared/directives/role';
 import { Page } from '@pbd/shared/components/pagination';
 import { Pizza } from '../../models/pizza.models';
 import { Spinner } from '@pbd/shared/components/spinner';

@@ -1,0 +1,18 @@
+{
+  "name": "role",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/directives/role/src",
+  "prefix": "rw",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@angular/build:unit-test",
+      "options": {
+        "buildTarget": "web:esbuild:development",
+        "watch": false,
+        "tsConfig": "libs/shared/directives/role/tsconfig.spec.json"
+      }
+    }
+  }
+}

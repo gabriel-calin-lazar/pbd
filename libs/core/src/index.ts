@@ -1,4 +1,3 @@
-export * from './lib/directives/role.directive';
 export * from './lib/guards/auth/auth.guard';
 export * from './lib/guards/role/role.guard';
 export * from './lib/interceptors/base-url.interceptor';

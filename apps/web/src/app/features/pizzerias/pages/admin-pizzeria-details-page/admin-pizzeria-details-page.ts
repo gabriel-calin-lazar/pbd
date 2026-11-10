@@ -3,7 +3,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { PizzeriaApi } from '../../services/pizzeria-api';
-import { RoleDirective } from '@pbd/core';
+import { RoleDirective } from '@pbd/shared/directives/role';
 import { Spinner } from '@pbd/shared/components/spinner';
 import { Callout } from '@pbd/shared/components/callout';
 
