@@ -47,7 +47,7 @@ export class Auth {
     return this.http
      .post<void>('/api/auth/logout', {})
      .pipe(
-      // user is still logged in when the page is reloaded, so we clear it here
+      // user is still logged in in Chrome when the page is reloaded, so we clear it here
       tap(() => this.user.set(null))
     );
   }

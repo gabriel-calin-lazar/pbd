@@ -62,9 +62,9 @@ describe('ProfilePage', () => {
     expect(el.querySelector('rw-button')).not.toBeNull();
   });
 
-  it('should navigate to details after logging out', () => {
+  it('should navigate to main  after logging out', () => {
     el.querySelector('rw-button')?.dispatchEvent(new Event('click', { bubbles: true }));
 
-    expect(routerStub.navigate).toHaveBeenCalledWith(['/details']);
+    expect(routerStub.navigate).toHaveBeenCalledWith(['/']);
   });
 });

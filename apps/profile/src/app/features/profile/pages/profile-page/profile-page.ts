@@ -26,7 +26,7 @@ export class ProfilePage {
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
         next: () => {
-          // does not work as user is still logged in when the page is reloaded, so we navigate to details page instead
+          // does not work in Chrome as user is still logged in when the page is reloaded, so we navigate to details page instead
           // window.location.href = '/';
           this.router.navigate(['/']);
         },
