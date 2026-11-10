@@ -47,6 +47,7 @@ export class CartStore implements HeaderCart {
   public readonly pizzeria = signal<CartPizzeria | null>(null);
   public readonly items = signal<CartItem[]>([]);
 
+  // recompute cart total on items change
   private readonly cartResource = httpResource<CartData | undefined>(() => {
     const currentItems = this.items();
     const currentPizzeria = this.pizzeria();
