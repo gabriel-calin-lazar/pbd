@@ -1,4 +1,10 @@
-import { ApplicationConfig, provideAppInitializer, inject } from '@angular/core';
+import {
+  ApplicationConfig,
+  ErrorHandler,
+  inject,
+  provideAppInitializer,
+  provideBrowserGlobalErrorListeners,
+} from '@angular/core';
 import {
   provideRouter,
   withComponentInputBinding,
@@ -12,9 +18,11 @@ import { API_BASE_URL } from '@pbd/tokens';
 import { CartStore, HEADER_CART } from '@pbd/cart-store';
 import { Auth } from '@pbd/auth';
 import { environment } from '../environments/environment';
+import { GlobalErrorHandler } from './core/error-handler/global-error-handler.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideBrowserGlobalErrorListeners(),
     provideRouter(
       routes,
       withComponentInputBinding({ unmatchedInputBehavior: 'undefinedIfStale' }),
@@ -29,5 +37,9 @@ export const appConfig: ApplicationConfig = {
     { provide: API_BASE_URL, useValue: environment.apiBaseUrl },
     provideHttpClient(withInterceptors([baseUrlInterceptor, credentialsInterceptor])),
     provideAppInitializer(() => inject(Auth).init()),
+    {
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandler,
+    },
   ],
 };
