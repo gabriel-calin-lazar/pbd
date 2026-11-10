@@ -5,6 +5,9 @@
     "source.fixAll.eslint": "explicit"
   },
   "remote.portsAttributes": {
+    "4200": {
+      "visibility": "public"
+    },
     "4201": {
       "visibility": "public"
     },
