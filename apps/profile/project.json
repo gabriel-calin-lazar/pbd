@@ -52,9 +52,7 @@
       "readyWhen": {
         "signal": true
       },
-      "dependsOn": [
-        "build"
-      ],
+      "dependsOn": ["build"],
       "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "profile:build",
@@ -65,9 +63,7 @@
     },
     "esbuild": {
       "executor": "@angular/build:application",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/apps/profile",
@@ -79,12 +75,8 @@
             "input": "apps/profile/public"
           }
         ],
-        "styles": [
-          "apps/web/src/styles.css"
-        ],
-        "polyfills": [
-          "es-module-shims"
-        ]
+        "styles": ["apps/web/src/styles.css"],
+        "polyfills": ["es-module-shims"]
       },
       "configurations": {
         "production": {

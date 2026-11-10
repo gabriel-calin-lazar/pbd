@@ -1,14 +1,8 @@
 {
-  "name": "@pbd/source",
+  "name": "@pbd",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve web",
-    "serve": "nx serve web",
-    "build": "nx build web",
-    "watch": "nx build web --watch --configuration=development",
-    "test": "nx test web",
-    "lint": "nx lint web",
     "format:write": "prettier --write .",
     "format:check": "prettier --check ."
   },

@@ -44,11 +44,9 @@ export class Auth {
   }
 
   public logout(): Observable<void> {
-    return this.http
-     .post<void>('/api/auth/logout', {})
-     .pipe(
+    return this.http.post<void>('/api/auth/logout', {}).pipe(
       // user is still logged in in Chrome when the page is reloaded, so we clear it here
-      tap(() => this.user.set(null))
+      tap(() => this.user.set(null)),
     );
   }
 }

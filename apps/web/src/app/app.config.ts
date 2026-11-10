@@ -7,11 +7,7 @@ import {
 } from '@angular/router';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { routes } from './app.routes';
-import {
-  API_BASE_URL,
-  baseUrlInterceptor,
-  credentialsInterceptor,
-} from '@pbd/core';
+import { API_BASE_URL, baseUrlInterceptor, credentialsInterceptor } from '@pbd/core';
 import { CartStore, HEADER_CART } from '@pbd/cart-store';
 import { Auth } from '@pbd/auth';
 import { environment } from '../environments/environment';

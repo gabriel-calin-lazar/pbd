@@ -1,8 +1,4 @@
-import {
-  ApplicationConfig,
-  inject,
-  provideAppInitializer,
-} from '@angular/core';
+import { ApplicationConfig, inject, provideAppInitializer } from '@angular/core';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { API_BASE_URL, baseUrlInterceptor, credentialsInterceptor } from '@pbd/core';

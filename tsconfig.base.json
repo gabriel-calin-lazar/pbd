@@ -27,7 +27,9 @@
       "@pbd/shared/models/adress": ["./libs/shared/models/adress/src/index.ts"],
       "@pbd/shared/pipes/catalog-image-url": ["./libs/shared/pipes/catalog-image-url/src/index.ts"],
       "@pbd/shared/components/callout": ["./libs/shared/components/callout/src/index.ts"],
-      "@pbd/shared/components/confirm-dialog": ["./libs/shared/components/confirm-dialog/src/index.ts"],
+      "@pbd/shared/components/confirm-dialog": [
+        "./libs/shared/components/confirm-dialog/src/index.ts"
+      ],
       "@pbd/shared/components/empty-state": ["./libs/shared/components/empty-state/src/index.ts"],
       "@pbd/shared/components/hero-banner": ["./libs/shared/components/hero-banner/src/index.ts"],
       "@pbd/shared/components/image-picker": ["./libs/shared/components/image-picker/src/index.ts"],
@@ -35,7 +37,9 @@
       "@pbd/shared/components/load-more": ["./libs/shared/components/load-more/src/index.ts"],
       "@pbd/shared/components/modal": ["./libs/shared/components/modal/src/index.ts"],
       "@pbd/shared/components/pagination": ["./libs/shared/components/pagination/src/index.ts"],
-      "@pbd/shared/components/photon-location-field": ["./libs/shared/components/photon-location-field/src/index.ts"],
+      "@pbd/shared/components/photon-location-field": [
+        "./libs/shared/components/photon-location-field/src/index.ts"
+      ],
       "@pbd/shared/components/spinner": ["./libs/shared/components/spinner/src/index.ts"],
       "@pbd/shared/components/status-badge": ["./libs/shared/components/status-badge/src/index.ts"],
       "@pbd/shared/components/textarea": ["./libs/shared/components/textarea/src/index.ts"]
