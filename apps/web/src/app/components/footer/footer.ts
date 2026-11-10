@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { RoleDirective } from '../../directives/role.directive';
+import { RoleDirective } from '@pbd/core';
 
 @Component({
   selector: 'rw-footer',

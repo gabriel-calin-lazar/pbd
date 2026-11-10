@@ -5,7 +5,7 @@ import { Auth } from '@pbd/auth';
 import { Avatar } from '@pbd/shared/components/avatar';
 import { PizzaLogo } from '@pbd/shared/components/pizza-logo';
 import { HEADER_CART } from '@pbd/cart-store';
-import { RoleDirective } from '../../directives/role.directive';
+import { RoleDirective } from '@pbd/core';
 
 @Component({
   selector: 'rw-header',
