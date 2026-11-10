@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, beforeEach } from 'vitest';
-import { API_BASE_URL } from '@pbd/core';
+import { API_BASE_URL } from '@pbd/tokens';
 import { CatalogImageUrlPipe } from './catalog-image-url.pipe';
 
 describe('CatalogImageUrlPipe', () => {

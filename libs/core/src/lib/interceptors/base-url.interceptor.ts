@@ -1,6 +1,6 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { API_BASE_URL } from '../tokens/api-base-url';
+import { API_BASE_URL } from '@pbd/tokens';
 
 export const baseUrlInterceptor: HttpInterceptorFn = (req, next) => {
   if (req.url.startsWith('/api')) {

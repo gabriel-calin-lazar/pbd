@@ -2,7 +2,7 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { API_BASE_URL } from '@pbd/core';
+import { API_BASE_URL } from '@pbd/tokens';
 import { ImagePicker } from './image-picker';
 
 describe('ImagePicker', () => {

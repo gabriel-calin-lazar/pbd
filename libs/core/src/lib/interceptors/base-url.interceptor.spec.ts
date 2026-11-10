@@ -3,7 +3,7 @@ import { provideHttpClient, withInterceptors, HttpClient } from '@angular/common
 import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { baseUrlInterceptor } from './base-url.interceptor';
-import { API_BASE_URL } from '../tokens/api-base-url';
+import { API_BASE_URL } from '@pbd/tokens';
 
 const apiBaseUrl = 'https://api.realworldangular.org';
 

@@ -1,7 +1,8 @@
 import { ApplicationConfig, inject, provideAppInitializer } from '@angular/core';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
-import { API_BASE_URL, baseUrlInterceptor, credentialsInterceptor } from '@pbd/core';
+import { baseUrlInterceptor, credentialsInterceptor } from '@pbd/core';
+import { API_BASE_URL } from '@pbd/tokens';
 import { environment } from '../environments/environment';
 import routes from '../app/features/profile/profile.routes';
 import { Auth } from '@pbd/auth';

@@ -3,7 +3,7 @@ import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideRouter } from '@angular/router';
 import { NO_ERRORS_SCHEMA, computed, signal } from '@angular/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { API_BASE_URL } from '@pbd/core';
+import { API_BASE_URL } from '@pbd/tokens';
 import { Auth } from '@pbd/auth';
 import { CartData, CartStore } from '@pbd/cart-store';
 import { CartPage } from './cart-page';

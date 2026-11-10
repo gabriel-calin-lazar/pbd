@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform, inject } from '@angular/core';
-import { API_BASE_URL } from '@pbd/core';
+import { API_BASE_URL } from '@pbd/tokens';
 
 export type CatalogImageKind = 'pizzeria' | 'pizza';
 

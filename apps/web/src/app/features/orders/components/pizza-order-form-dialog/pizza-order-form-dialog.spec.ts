@@ -14,7 +14,7 @@ import { Modal } from '@pbd/shared/components/modal';
 import { Input } from '@pbd/shared/components/input';
 import { Spinner } from '@pbd/shared/components/spinner';
 import { SizeOptionField } from '../pizza-size-option-field/pizza-size-option-field';
-import { API_BASE_URL } from '@pbd/core';
+import { API_BASE_URL } from '@pbd/tokens';
 
 const mockPizza: Pizza = {
   id: 'pizza1',

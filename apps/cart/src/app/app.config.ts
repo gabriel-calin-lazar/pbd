@@ -1,7 +1,8 @@
 import { ApplicationConfig, inject, provideAppInitializer } from '@angular/core';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
-import { API_BASE_URL, baseUrlInterceptor, credentialsInterceptor } from '@pbd/core';
+import { baseUrlInterceptor, credentialsInterceptor } from '@pbd/core';
+import { API_BASE_URL } from '@pbd/tokens';
 import { Auth } from '@pbd/auth';
 import { CartStore, HEADER_CART } from '@pbd/cart-store';
 import { environment } from '../environments/environment';
