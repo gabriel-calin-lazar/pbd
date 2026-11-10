@@ -14,6 +14,11 @@
     "sharedGlobals": []
   },
   "targetDefaults": {
+    "build": {
+      "cache": true,
+      "inputs": ["production", "^production"],
+      "outputs": ["{workspaceRoot}/dist/apps/{projectName}"]
+    },
     "@angular/build:application": {
       "cache": true,
       "dependsOn": [
