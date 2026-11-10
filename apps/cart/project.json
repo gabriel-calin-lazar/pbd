@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "rw",
   "sourceRoot": "apps/cart/src",
-  "tags": [],
+  "tags": ["app:remote", "domain:cart"],
   "targets": {
     "build": {
       "executor": "@angular-architects/native-federation:build",

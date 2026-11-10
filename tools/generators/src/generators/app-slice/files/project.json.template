@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "rw",
   "sourceRoot": "apps/<%= fileName %>/src",
-  "tags": [],
+  "tags": ["app:remote", "domain:/<%= fileName %>"],
   "targets": {
     "build": {
       "executor": "@angular-architects/native-federation:build",

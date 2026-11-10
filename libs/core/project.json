@@ -4,7 +4,7 @@
   "sourceRoot": "libs/core/src",
   "prefix": "rw",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:core", "type:lib", "domain:core"],
   "targets": {
     "test": {
       "executor": "@angular/build:unit-test",

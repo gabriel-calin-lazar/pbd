@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "rw",
   "sourceRoot": "apps/web/src",
-  "tags": [],
+  "tags": ["app:host", "domain:shell"],
   "targets": {
     "build": {
       "executor": "@angular-architects/native-federation:build",

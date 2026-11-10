@@ -4,6 +4,6 @@
   "sourceRoot": "libs/shared/photon/models/src",
   "prefix": "rw",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:shared", "type:lib", "domain:photon"],
   "targets": {}
 }
