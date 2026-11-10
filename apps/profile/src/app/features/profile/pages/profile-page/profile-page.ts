@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Auth } from '@pbd/auth';
 import { Avatar } from '@pbd/shared/components/avatar';
 import { Button } from '@pbd/shared/components/button';
+// import { CartStore } from '@pbd/cart-store';
 
 @Component({
   selector: 'rw-profile-page',
@@ -15,6 +16,7 @@ export class ProfilePage {
   private readonly auth = inject(Auth);
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
+  // private readonly store = inject(CartStore);
 
   protected readonly isLoggingOut = signal(false);
   protected readonly user = this.auth.user;
