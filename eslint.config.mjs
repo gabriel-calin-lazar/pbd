@@ -17,6 +17,10 @@ export default [
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
           depConstraints: [
             {
+              sourceTag: 'domain:core',
+              onlyDependOnLibsWithTags: ['domain:auth', 'domain:generic', 'domain:token'],
+            },
+            {
               sourceTag: '*',
               onlyDependOnLibsWithTags: ['*'],
             },

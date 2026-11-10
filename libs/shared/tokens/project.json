@@ -2,7 +2,7 @@
   "name": "tokens",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/tokens/src",
-  "tags": ["scope:shared", "type:lib", "domain:tokens"],
+  "tags": ["scope:shared", "type:lib", "domain:token"],
   "projectType": "library",
   "targets": {}
 }
