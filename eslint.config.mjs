@@ -21,6 +21,10 @@ export default [
               onlyDependOnLibsWithTags: ['domain:auth', 'domain:generic', 'domain:token'],
             },
             {
+              sourceTag: 'domain:profile',
+              notDependOnLibsWithTags: ['domain:cart'],
+            },
+            {
               sourceTag: '*',
               onlyDependOnLibsWithTags: ['*'],
             },
