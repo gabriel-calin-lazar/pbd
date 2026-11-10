@@ -44,5 +44,6 @@
       "unitTestRunner": "vitest-angular",
       "bundler": "esbuild"
     }
-  }
+  },
+  "nxCloudId": "6af2eb5763e938f53ba22f21"
 }
