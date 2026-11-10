@@ -1,9 +1,7 @@
 import { initFederation } from '@angular-architects/native-federation';
+import { environment } from './environments/environment';
 
-// TODO make this path configurable via environment entry
-// development - staging - production
-// port based - stage location based - prod location based
-initFederation('federation.manifest.json', {
+initFederation(environment.federationManifestPath, {
   hostRemoteEntry: { url: './remoteEntry.json' },
   sse: true,
 })
